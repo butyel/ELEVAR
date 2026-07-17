@@ -35,3 +35,25 @@ function doPost(e) {
 function doGet() {
   return ContentService.createTextOutput('ELEVAR Talentos - API ativa');
 }
+
+function testar() {
+  // Teste manual sem precisar do formulário
+  var mockEvent = {
+    parameter: {
+      nome: 'Teste',
+      email: 'teste@email.com',
+      telefone: '(00) 00000-0000',
+      linkedin: '',
+      formacao: 'Administração - USP',
+      cursos: '',
+      ultimoCargo: 'Analista',
+      empresa: 'Empresa Teste',
+      tempoExperiencia: '3-5',
+      area: 'gestao',
+      salario: '5-8',
+      resumo: 'Teste de integração'
+    }
+  };
+  doPost(mockEvent);
+  Logger.log('Teste concluído! Verifique a planilha.');
+}
