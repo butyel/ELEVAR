@@ -330,14 +330,12 @@
     function enviarParaSheet(formData, fotoBase64) {
       const scriptURL = 'https://script.google.com/macros/s/AKfycbwvtc1JVeFg8P3UCoqG1dZBlXZO_aKbCAVcEvxyWVjZuxBC66WLCJDa801smdC1gMqb/exec';
       
-      // Criar iframe oculto para evitar CORS
       const frameName = 'frame_' + Date.now();
       const iframe = document.createElement('iframe');
       iframe.name = frameName;
       iframe.style.display = 'none';
       document.body.appendChild(iframe);
       
-      // Criar formulário que envia para o iframe
       const form = document.createElement('form');
       form.method = 'POST';
       form.action = scriptURL;
@@ -371,14 +369,13 @@
       document.body.appendChild(form);
       form.submit();
       
-      // Limpar e redirecionar
-      setTimeout(() => {
+      // Aguarda o envio completar e redireciona
+      setTimeout(function() {
         document.body.removeChild(form);
         document.body.removeChild(iframe);
-      }, 1000);
-      
-      alert('Currículo salvo com sucesso! Em breve entraremos em contato.');
-      window.location.href = 'index.html';
+        alert('Currículo salvo com sucesso! Em breve entraremos em contato.');
+        window.location.href = 'index.html';
+      }, 3000);
     }
   </script>
 </body>
