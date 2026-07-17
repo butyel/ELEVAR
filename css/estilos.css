@@ -157,6 +157,14 @@ body {
   text-transform: uppercase;
 }
 
+.logo-img {
+  max-width: 520px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
 .hero-tagline {
   font-family: 'Cormorant Garamond', serif;
   font-size: 28px;
@@ -1134,6 +1142,14 @@ body {
   letter-spacing: 0.3em;
   color: var(--gold);
   text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.atalhos-logo-img {
+  height: 36px;
+  width: auto;
+  display: block;
 }
 
 .atalhos-links {
