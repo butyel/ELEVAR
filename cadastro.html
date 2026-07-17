@@ -349,18 +349,18 @@
         foto: fotoBase64 ? 'ANEXO' : 'SEM FOTO'
       };
 
-      // Enviar para Google Sheet
+      // Enviar para Google Sheet (no-cors para evitar bloqueio)
       fetch(scriptURL, {
         method: 'POST',
+        mode: 'no-cors',
         body: JSON.stringify(dados),
-        headers: {'Content-Type': 'application/json'}
+        headers: {'Content-Type': 'text/plain'}
       })
-      .then(r => r.json())
-      .then(data => {
+      .then(() => {
         alert('Currículo salvo com sucesso! Em breve entraremos em contato.');
         window.location.href = 'index.html';
       })
-      .catch(err => {
+      .catch(() => {
         // Fallback para WhatsApp se der erro
         let mensagem = "🔥 *NOVO CURRÍCULO - ELEVAR TALENTOS*\n\n";
         mensagem += `👤 *Nome:* ${dados.nome}\n`;
