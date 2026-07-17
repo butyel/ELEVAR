@@ -330,19 +330,7 @@
     function enviarParaSheet(formData, fotoBase64) {
       const scriptURL = 'https://script.google.com/macros/s/AKfycbwvtc1JVeFg8P3UCoqG1dZBlXZO_aKbCAVcEvxyWVjZuxBC66WLCJDa801smdC1gMqb/exec';
       
-      const frameName = 'frame_' + Date.now();
-      const iframe = document.createElement('iframe');
-      iframe.name = frameName;
-      iframe.style.display = 'none';
-      document.body.appendChild(iframe);
-      
-      const form = document.createElement('form');
-      form.method = 'POST';
-      form.action = scriptURL;
-      form.target = frameName;
-      form.style.display = 'none';
-      
-      const campos = {
+      var dados = {
         nome: formData.get('nome'),
         email: formData.get('email'),
         telefone: formData.get('telefone'),
@@ -358,24 +346,14 @@
         foto: fotoBase64 ? 'ANEXO' : 'SEM FOTO'
       };
       
-      for (const [key, value] of Object.entries(campos)) {
-        const input = document.createElement('input');
-        input.type = 'hidden';
-        input.name = key;
-        input.value = value || '';
-        form.appendChild(input);
-      }
+      fetch(scriptURL, {
+        method: 'POST',
+        body: JSON.stringify(dados),
+        headers: {'Content-Type': 'text/plain'}
+      }).catch(function() {});
       
-      document.body.appendChild(form);
-      form.submit();
-      
-      // Aguarda o envio completar e redireciona
-      setTimeout(function() {
-        document.body.removeChild(form);
-        document.body.removeChild(iframe);
-        alert('Currículo salvo com sucesso! Em breve entraremos em contato.');
-        window.location.href = 'index.html';
-      }, 3000);
+      alert('Currículo salvo com sucesso! Em breve entraremos em contato.');
+      window.location.href = 'index.html';
     }
   </script>
 </body>

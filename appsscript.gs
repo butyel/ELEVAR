@@ -19,6 +19,8 @@ function setup() {
 }
 
 function doPost(e) {
+  var dados = JSON.parse(e.postData.contents);
+  
   SHEET_ID = PropertiesService.getScriptProperties().getProperty('SHEET_ID');
   
   if (!SHEET_ID) {
@@ -38,18 +40,18 @@ function doPost(e) {
   
   sheet.appendRow([
     new Date(),
-    e.parameter.nome || '',
-    e.parameter.email || '',
-    e.parameter.telefone || '',
-    e.parameter.linkedin || '',
-    e.parameter.formacao || '',
-    e.parameter.cursos || '',
-    e.parameter.ultimoCargo || '',
-    e.parameter.empresa || '',
-    e.parameter.tempoExperiencia || '',
-    e.parameter.area || '',
-    e.parameter.salario || '',
-    e.parameter.resumo || ''
+    dados.nome || '',
+    dados.email || '',
+    dados.telefone || '',
+    dados.linkedin || '',
+    dados.formacao || '',
+    dados.cursos || '',
+    dados.ultimoCargo || '',
+    dados.empresa || '',
+    dados.tempoExperiencia || '',
+    dados.area || '',
+    dados.salario || '',
+    dados.resumo || ''
   ]);
   
   return ContentService.createTextOutput('OK').setMimeType(ContentService.MimeType.TEXT);
