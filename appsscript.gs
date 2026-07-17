@@ -1,15 +1,32 @@
-function doPost(e) {
-  const ss = SpreadsheetApp.getActiveSpreadsheet();
-  let sheet = ss.getSheetByName('Currículos');
+function setup() {
+  var ss = SpreadsheetApp.create('ELEVAR - Currículos Recebidos');
   
-  if (!sheet) {
-    sheet = ss.insertSheet('Currículos');
-    sheet.getRange(1, 1, 1, 13).setValues([[
+  ss.getRange('A1:M1').setValues([[
+    'Data', 'Nome', 'E-mail', 'Telefone', 'LinkedIn', 
+    'Formação', 'Cursos', 'Último Cargo', 'Empresa', 
+    'Experiência', 'Área', 'Salário', 'Resumo'
+  ]]);
+  
+  ss.renameActiveSheet('Currículos');
+  
+  Logger.log('Planilha criada com sucesso!');
+  Logger.log('Clique no link abaixo:');
+  Logger.log(ss.getUrl());
+}
+
+function doPost(e) {
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  if (!ss) {
+    ss = SpreadsheetApp.create('ELEVAR - Currículos Recebidos');
+    ss.getRange('A1:M1').setValues([[
       'Data', 'Nome', 'E-mail', 'Telefone', 'LinkedIn', 
       'Formação', 'Cursos', 'Último Cargo', 'Empresa', 
       'Experiência', 'Área', 'Salário', 'Resumo'
     ]]);
+    ss.renameActiveSheet('Currículos');
   }
+  
+  var sheet = ss.getSheetByName('Currículos') || ss.getActiveSheet();
   
   sheet.appendRow([
     new Date(),
@@ -27,9 +44,7 @@ function doPost(e) {
     e.parameter.resumo || ''
   ]);
   
-  return ContentService.createTextOutput(
-    '<script>window.parent.location.href="https://jefferson-malagutti.vercel.app";</script>'
-  ).setMimeType(ContentService.MimeType.HTML);
+  return ContentService.createTextOutput('OK').setMimeType(ContentService.MimeType.TEXT);
 }
 
 function doGet() {
