@@ -1,5 +1,10 @@
+var SHEET_ID = '';
+
 function setup() {
   var ss = SpreadsheetApp.create('ELEVAR - Currículos Recebidos');
+  SHEET_ID = ss.getId();
+  
+  PropertiesService.getScriptProperties().setProperty('SHEET_ID', SHEET_ID);
   
   ss.getRange('A1:M1').setValues([[
     'Data', 'Nome', 'E-mail', 'Telefone', 'LinkedIn', 
@@ -10,14 +15,16 @@ function setup() {
   ss.renameActiveSheet('Currículos');
   
   Logger.log('Planilha criada com sucesso!');
-  Logger.log('Clique no link abaixo:');
   Logger.log(ss.getUrl());
 }
 
 function doPost(e) {
-  var ss = SpreadsheetApp.getActiveSpreadsheet();
-  if (!ss) {
-    ss = SpreadsheetApp.create('ELEVAR - Currículos Recebidos');
+  SHEET_ID = PropertiesService.getScriptProperties().getProperty('SHEET_ID');
+  
+  if (!SHEET_ID) {
+    var ss = SpreadsheetApp.create('ELEVAR - Currículos Recebidos');
+    SHEET_ID = ss.getId();
+    PropertiesService.getScriptProperties().setProperty('SHEET_ID', SHEET_ID);
     ss.getRange('A1:M1').setValues([[
       'Data', 'Nome', 'E-mail', 'Telefone', 'LinkedIn', 
       'Formação', 'Cursos', 'Último Cargo', 'Empresa', 
@@ -26,7 +33,8 @@ function doPost(e) {
     ss.renameActiveSheet('Currículos');
   }
   
-  var sheet = ss.getSheetByName('Currículos') || ss.getActiveSheet();
+  var ss = SpreadsheetApp.openById(SHEET_ID);
+  var sheet = ss.getSheetByName('Currículos');
   
   sheet.appendRow([
     new Date(),
@@ -45,6 +53,15 @@ function doPost(e) {
   ]);
   
   return ContentService.createTextOutput('OK').setMimeType(ContentService.MimeType.TEXT);
+}
+
+function verPlanilha() {
+  var id = PropertiesService.getScriptProperties().getProperty('SHEET_ID');
+  if (id) {
+    Logger.log(SpreadsheetApp.openById(id).getUrl());
+  } else {
+    Logger.log('Nenhuma planilha configurada. Execute setup() primeiro.');
+  }
 }
 
 function doGet() {
