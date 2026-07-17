@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastrar Currículo | ELEVAR Talentos</title>
+  <meta name="description" content="Cadastre seu currículo na ELEVAR Talentos e seja visto por empresas de alto desempenho.">
+  <link rel="canonical" href="https://elevar-malagutti.web.app/cadastro.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --gold: #C9A84C;
+      --gold-light: #E2C47A;
+      --gold-dark: #8B6914;
+      --charcoal: #1A1A1A;
+      --charcoal-mid: #2D2D2D;
+      --white: #FFFFFF;
+      --offwhite: #F5F0E8;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: var(--charcoal);
+      color: var(--offwhite);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 300;
+      line-height: 1.8;
+    }
+    .container {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 60px 24px;
+    }
+    .header { text-align: center; margin-bottom: 48px; }
+    .back {
+      display: inline-block;
+      color: var(--gold);
+      text-decoration: none;
+      font-size: 12px;
+      letter-spacing: 0.2em;
+      margin-bottom: 32px;
+    }
+    .back:hover { color: var(--white); }
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 42px;
+      font-weight: 300;
+      color: var(--white);
+      line-height: 1.2;
+    }
+    .subtitle {
+      font-size: 14px;
+      color: #888;
+      margin-top: 12px;
+    }
+    .form-section {
+      background: var(--charcoal-mid);
+      padding: 32px;
+      margin-bottom: 24px;
+    }
+    .form-section h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 400;
+      color: var(--gold);
+      margin-bottom: 24px;
+      border-bottom: 1px solid rgba(201,168,76,0.2);
+      padding-bottom: 12px;
+    }
+    .form-group { margin-bottom: 20px; }
+    .form-group label {
+      display: block;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      background: var(--charcoal);
+      border: 1px solid rgba(201,168,76,0.2);
+      padding: 14px 16px;
+      font-size: 14px;
+      color: var(--offwhite);
+      font-family: 'Montserrat', sans-serif;
+      transition: border-color 0.3s;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--gold);
+    }
+    .form-group textarea { min-height: 120px; resize: vertical; }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .form-group select {
+      cursor: pointer;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23C9A84C' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 16px center;
+    }
+    .file-upload {
+      border: 2px dashed rgba(201,168,76,0.3);
+      padding: 32px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .file-upload:hover {
+      border-color: var(--gold);
+      background: rgba(201,168,76,0.05);
+    }
+    .file-upload input { display: none; }
+    .file-icon {
+      font-size: 32px;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+    .file-text {
+      font-size: 13px;
+      color: #888;
+    }
+    .file-text span { color: var(--gold); }
+    .submit-btn {
+      display: block;
+      width: 100%;
+      background: linear-gradient(135deg, var(--gold-dark), var(--gold), var(--gold-light));
+      color: var(--charcoal);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      padding: 18px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .submit-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(201,168,76,0.3);
+    }
+    .whatsapp-note {
+      text-align: center;
+      margin-top: 24px;
+      font-size: 12px;
+      color: #666;
+    }
+    .whatsapp-note a {
+      color: var(--gold);
+      text-decoration: none;
+    }
+    @media (max-width: 500px) {
+      .form-row { grid-template-columns: 1fr; }
+      h1 { font-size: 32px; }
+      .form-section { padding: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <a href="index.html" class="back">← Voltar para ELEVAR</a>
+      <h1>Cadastrar Currículo</h1>
+      <p class="subtitle">Preencha seus dados e conquiste sua vaga dos sonhos</p>
+    </div>
+
+    <form id="cvForm" onsubmit="enviarCurriculo(event)">
+      <!-- Dados Pessoais -->
+      <div class="form-section">
+        <h2>Dados Pessoais * Campos obrigatórios</h2>
+        <div class="form-group">
+          <label>Foto de Perfil (opcional)</label>
+          <div class="file-upload" onclick="document.getElementById('foto').click()">
+            <input type="file" id="foto" name="foto" accept="image/*" onchange="previewFoto(this)">
+            <div class="file-icon">📷</div>
+            <div class="file-text" id="fotoText">Clique para selecionar uma foto</div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Nome Completo *</label>
+            <input type="text" name="nome" required placeholder="Seu nome completo">
+          </div>
+          <div class="form-group">
+            <label>E-mail *</label>
+            <input type="email" name="email" required placeholder="seu@email.com">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Telefone/WhatsApp *</label>
+            <input type="tel" name="telefone" required placeholder="(00) 00000-0000">
+          </div>
+          <div class="form-group">
+            <label>LinkedIn</label>
+            <input type="url" name="linkedin" placeholder="https://linkedin.com/in/seu-perfil">
+          </div>
+        </div>
+      </div>
+
+      <!-- Formação -->
+      <div class="form-section">
+        <h2>Formação Acadêmica</h2>
+        <div class="form-group">
+          <label>Formação mais recente</label>
+          <input type="text" name="formacao" placeholder="Ex: Administração - USP 2020">
+        </div>
+        <div class="form-group">
+          <label>MBA/Cursos extras</label>
+          <input type="text" name="cursos" placeholder="Ex: Gestão Comercial - FGV 2022">
+        </div>
+      </div>
+
+      <!-- Experiência -->
+      <div class="form-section">
+        <h2>Experiência Profissional</h2>
+        <div class="form-group">
+          <label>Último cargo/função</label>
+          <input type="text" name="ultimoCargo" placeholder="Ex: Gerente Comercial">
+        </div>
+        <div class="form-group">
+          <label>Empresa atual ou última</label>
+          <input type="text" name="empresa" placeholder="Ex: Grupo Vital">
+        </div>
+<div class="form-group">
+            <label>Tempo de experiência profissional *</label>
+            <select name="tempoExperiencia" required>
+              <option value="">Selecione...</option>
+              <option value="1">Menos de 1 ano</option>
+              <option value="1-3">1 a 3 anos</option>
+              <option value="3-5">3 a 5 anos</option>
+              <option value="5-10">5 a 10 anos</option>
+              <option value="10+">Mais de 10 anos</option>
+            </select>
+          </div>
+      </div>
+
+      <!--linkedin -->
+      <div class="form-section">
+        <h2>Área de Interesse *</h2>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Área desejada *</label>
+            <select name="area" required>
+              <option value="">Selecione...</option>
+              <option value="vendas">Vendas / Comercial</option>
+              <option value="gestao">Gestão / Liderança</option>
+              <option value="operacoes">Operações / Logística</option>
+              <option value="rh">Recursos Humanos</option>
+              <option value="financeiro">Financeiro</option>
+              <option value="marketing">Marketing</option>
+              <option value="ti">Tecnologia da Informação</option>
+              <option value="outros">Outros</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Pretenção salarial</label>
+            <select name="salario">
+              <option value="">Selecione...</option>
+              <option value="ate3">Até R$ 3.000</option>
+              <option value="3-5">R$ 3.000 a R$ 5.000</option>
+              <option value="5-8">R$ 5.000 a R$ 8.000</option>
+              <option value="8-12">R$ 8.000 a R$ 12.000</option>
+              <option value="12+">R$ 12.000+</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!---linkedin -->
+      <div class="form-section">
+        <h2>Resumo Profissional</h2>
+        <div class="form-group">
+          <label>Conte um pouco sobre você</label>
+          <textarea name="resumo" placeholder="Fale sobre suas habilidades, conquistas e objetivos profissionais..."></textarea>
+        </div>
+      </div>
+
+      <!-- Termos -->
+      <div class="form-group" style="display:flex;align-items:flex-start;gap:12px;margin-top:24px;">
+        <input type="checkbox" id="termos" required style="width:auto;margin-top:2px;">
+        <label for="termos" style="font-size:12px;color:#666;text-transform:none;letter-spacing:0;">
+          Concordo com o tratamento dos meus dados conforme a <a href="#" style="color:var(--gold);">política de privacidade</a>. Autorizo o compartilhamento com empresas parceiras.
+        </label>
+      </div>
+
+      <button type="submit" class="submit-btn">Enviar Currículo</button>
+
+      <p class="whatsapp-note">
+        Prefere falar pelo WhatsApp? <a href="https://wa.me/5518996272190?text=Olá,%20gostaria%20de%20me%20cadastrar%20na%20ELEVAR%20Talentos">Clique aqui</a>
+      </p>
+    </form>
+  </div>
+
+  <script>
+    function previewFoto(input) {
+      const text = document.getElementById('fotoText');
+      if (input.files && input.files[0]) {
+        text.innerHTML = '✓ ' + input.files[0].name;
+        text.style.color = '#C9A84C';
+      }
+    }
+
+    function enviarCurriculo(e) {
+      e.preventDefault();
+      const form = document.getElementById('cvForm');
+      const formData = new FormData(form);
+      
+      // Converter imagem para base64 se existir
+      const fotoInput = document.getElementById('foto');
+      if (fotoInput.files && fotoInput.files[0]) {
+        const reader = new FileReader();
+        reader.onload = function() {
+          enviarParaSheet(formData, reader.result);
+        };
+        reader.readAsDataURL(fotoInput.files[0]);
+      } else {
+        enviarParaSheet(formData, null);
+      }
+    }
+
+    function enviarParaSheet(formData, fotoBase64) {
+      // URL do Google Apps Script
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbwpSuzKhCST54-0IqIRlQ6b4M2EDkZpBu8c6dnYqJg4TlTkinOcheLKFvEca6Wzsbvw/exec';
+      
+      // Preparar dados
+      let dados = {
+        timestamp: new Date().toISOString(),
+        nome: formData.get('nome'),
+        email: formData.get('email'),
+        telefone: formData.get('telefone'),
+        linkedin: formData.get('linkedin'),
+        formacao: formData.get('formacao'),
+        cursos: formData.get('cursos'),
+        ultimoCargo: formData.get('ultimoCargo'),
+        empresa: formData.get('empresa'),
+        tempoExperiencia: formData.get('tempoExperiencia'),
+        area: formData.get('area'),
+        salario: formData.get('salario'),
+        resumo: formData.get('resumo'),
+        foto: fotoBase64 ? 'ANEXO' : 'SEM FOTO'
+      };
+
+      // Enviar para Google Sheet
+      fetch(scriptURL, {
+        method: 'POST',
+        body: JSON.stringify(dados),
+        headers: {'Content-Type': 'application/json'}
+      })
+      .then(r => r.json())
+      .then(data => {
+        alert('Currículo salvo com sucesso! Em breve entraremos em contato.');
+        window.location.href = 'index.html';
+      })
+      .catch(err => {
+        // Fallback para WhatsApp se der erro
+        let mensagem = "🔥 *NOVO CURRÍCULO - ELEVAR TALENTOS*\n\n";
+        mensagem += `👤 *Nome:* ${dados.nome}\n`;
+        mensagem += `📧 *E-mail:* ${dados.email}\n`;
+        mensagem += `📱 *Telefone:* ${dados.telefone}\n`;
+        mensagem += `💼 *Último Cargo:* ${dados.ultimoCargo}\n`;
+        mensagem += `🏢 *Empresa:* ${dados.empresa}\n`;
+        mensagem += `🎯 *Área:* ${dados.area}`;
+        
+        window.open(`https://wa.me/5518996272190?text=${encodeURIComponent(mensagem)}`, '_blank');
+      });
+    }
+  </script>
+</body>
+</html>

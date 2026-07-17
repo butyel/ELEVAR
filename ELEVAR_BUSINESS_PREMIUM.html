@@ -1,0 +1,1981 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ELEVAR — Gestão & Performance Humana</title>
+<meta name="description" content="Consultoria especializada em liderança, desenvolvimento de equipes e otimização de processos. Treinamentos B2B, coaching executivo e consultoria gerencial para empresas de alto desempenho.">
+<meta name="author" content="Jefferson Malaguti">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="ELEVAR — Gestão & Performance Humana">
+<meta property="og:description" content="Transformando potencial humano em performance corporativa de alto nível">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://elevar.com.br">
+<meta property="og:image" content="https://elevar.com.br/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#C9A84C">
+<link rel="canonical" href="https://elevar.com.br">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<style>
+  :root {
+    --gold: #C9A84C;
+    --gold-light: #E2C47A;
+    --gold-pale: #F5E6C0;
+    --gold-dark: #8B6914;
+    --charcoal: #1A1A1A;
+    --charcoal-mid: #2D2D2D;
+    --charcoal-soft: #3D3D3D;
+    --white: #FFFFFF;
+    --offwhite: #F5F0E8;
+    --offwhite-dark: #EDE6D6;
+    --cream: #FAF6EE;
+  }
+
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--charcoal);
+    color: var(--offwhite);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    overflow-x: hidden;
+  }
+
+  /* ─── SLIDE SYSTEM ─── */
+  .slide {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    padding: 80px 60px;
+  }
+
+  /* ─── DECORATIVE ─── */
+  .gold-line {
+    width: 60px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    margin: 24px auto;
+  }
+  .gold-line-left {
+    width: 60px;
+    height: 1px;
+    background: linear-gradient(90deg, var(--gold), transparent);
+    margin: 24px 0;
+  }
+  .corner-ornament {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    opacity: 0.3;
+  }
+  .corner-ornament.tl { top: 30px; left: 30px; border-top: 1px solid var(--gold); border-left: 1px solid var(--gold); }
+  .corner-ornament.tr { top: 30px; right: 30px; border-top: 1px solid var(--gold); border-right: 1px solid var(--gold); }
+  .corner-ornament.bl { bottom: 30px; left: 30px; border-bottom: 1px solid var(--gold); border-left: 1px solid var(--gold); }
+  .corner-ornament.br { bottom: 30px; right: 30px; border-bottom: 1px solid var(--gold); border-right: 1px solid var(--gold); }
+
+  /* ─── NOISE TEXTURE OVERLAY ─── */
+  .noise {
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* ─── SLIDE 1: CAPA ─── */
+  #slide-1 {
+    background: var(--charcoal);
+    flex-direction: column;
+    text-align: center;
+  }
+  #slide-1::before {
+    content: '';
+    position: absolute;
+    top: -200px; left: 50%; transform: translateX(-50%);
+    width: 800px; height: 800px;
+    background: radial-gradient(ellipse at center, rgba(201,168,76,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .logo-mark {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 100px;
+    font-weight: 300;
+    letter-spacing: 0.3em;
+    color: var(--gold);
+    line-height: 1;
+    position: relative;
+    z-index: 1;
+    animation: fadeUp 1.2s ease forwards;
+  }
+  .logo-mark span {
+    display: block;
+    font-size: 13px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.5em;
+    color: var(--offwhite);
+    margin-top: 8px;
+    text-transform: uppercase;
+  }
+  .hero-tagline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--offwhite-dark);
+    max-width: 600px;
+    line-height: 1.6;
+    position: relative;
+    z-index: 1;
+    animation: fadeUp 1.2s 0.3s ease forwards;
+    opacity: 0;
+  }
+  .hero-sub {
+    font-size: 11px;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--gold);
+    position: relative;
+    z-index: 1;
+    animation: fadeUp 1.2s 0.6s ease forwards;
+    opacity: 0;
+  }
+
+  /* ─── SLIDE 2: PROPÓSITO ─── */
+  #slide-2 { background: var(--charcoal-mid); }
+  #slide-2 .inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    max-width: 1200px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+  }
+  .section-label {
+    font-size: 10px;
+    letter-spacing: 0.5em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+  }
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 52px;
+    font-weight: 300;
+    line-height: 1.1;
+    color: var(--offwhite);
+  }
+  .section-title em {
+    color: var(--gold);
+    font-style: italic;
+  }
+  .body-text {
+    font-size: 15px;
+    line-height: 1.9;
+    color: #B8B0A0;
+    font-weight: 300;
+  }
+  .quote-block {
+    border-left: 1px solid var(--gold);
+    padding: 24px 32px;
+    background: rgba(201,168,76,0.04);
+    margin: 30px 0;
+  }
+  .quote-block p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--offwhite);
+    line-height: 1.6;
+  }
+  .stat-row {
+    display: flex;
+    gap: 40px;
+    margin-top: 40px;
+  }
+  .stat-item .num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    font-weight: 600;
+    color: var(--gold);
+    line-height: 1;
+  }
+  .stat-item .lbl {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #888;
+    margin-top: 6px;
+  }
+  .vertical-divider {
+    width: 1px;
+    background: linear-gradient(180deg, transparent, var(--gold), transparent);
+    opacity: 0.3;
+    position: absolute;
+    left: 50%;
+    top: 0; bottom: 0;
+  }
+
+  /* ─── SLIDE 3: FUNDADOR ─── */
+  #slide-3 { background: var(--charcoal); }
+  #slide-3 .inner {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 80px;
+    max-width: 1200px;
+    width: 100%;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+  .founder-card {
+    background: linear-gradient(135deg, var(--charcoal-mid), var(--charcoal-soft));
+    border: 1px solid rgba(201,168,76,0.2);
+    padding: 48px 40px;
+    text-align: center;
+    position: relative;
+  }
+  .founder-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+  .founder-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+    margin: 0 auto 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 42px;
+    font-weight: 300;
+    color: var(--charcoal);
+    border: 3px solid rgba(201,168,76,0.4);
+  }
+  .founder-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 400;
+    color: var(--offwhite);
+  }
+  .founder-title {
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-top: 8px;
+  }
+  .founder-role {
+    font-size: 12px;
+    color: #888;
+    margin-top: 16px;
+    line-height: 1.6;
+  }
+  .founder-badge {
+    display: inline-block;
+    background: rgba(201,168,76,0.1);
+    border: 1px solid rgba(201,168,76,0.3);
+    color: var(--gold);
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 6px 16px;
+    margin-top: 20px;
+  }
+  .pillars-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 20px;
+  }
+  .pillar-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px 24px;
+    background: rgba(201,168,76,0.04);
+    border: 1px solid rgba(201,168,76,0.1);
+    transition: all 0.3s ease;
+  }
+  .pillar-item:hover {
+    border-color: rgba(201,168,76,0.4);
+    background: rgba(201,168,76,0.08);
+  }
+  .pillar-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    font-weight: 300;
+    color: rgba(201,168,76,0.3);
+    line-height: 1;
+    min-width: 36px;
+  }
+  .pillar-text h4 {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 6px;
+  }
+  .pillar-text p { font-size: 13px; color: #AAA; line-height: 1.6; }
+
+  /* ─── SLIDE 4: PILARES ─── */
+  #slide-4 { background: var(--offwhite); }
+  #slide-4 .section-label { color: var(--gold-dark); }
+  #slide-4 .section-title { color: var(--charcoal); }
+  #slide-4 .inner {
+    max-width: 1200px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+  }
+  .pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    margin-top: 60px;
+    background: var(--offwhite-dark);
+  }
+  .pillar-card {
+    background: var(--offwhite);
+    padding: 60px 40px;
+    text-align: center;
+    position: relative;
+    transition: all 0.4s ease;
+    cursor: default;
+  }
+  .pillar-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--gold);
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+  }
+  .pillar-card:hover::after { transform: scaleX(1); }
+  .pillar-card:hover { background: var(--cream); }
+  .pillar-icon {
+    width: 64px;
+    height: 64px;
+    border: 1px solid var(--gold);
+    margin: 0 auto 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: var(--gold);
+    position: relative;
+  }
+  .pillar-icon::before {
+    content: '';
+    position: absolute;
+    inset: 4px;
+    border: 1px solid rgba(201,168,76,0.2);
+  }
+  .pillar-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 400;
+    color: var(--charcoal);
+    margin-bottom: 16px;
+  }
+  .pillar-card p { font-size: 13px; color: #666; line-height: 1.8; }
+
+  /* ─── SLIDE 5: PORTFÓLIO ─── */
+  #slide-5 { background: var(--charcoal); }
+  #slide-5 .inner {
+    max-width: 1200px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+  }
+  .portfolio-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 50px;
+  }
+  .portfolio-table thead tr {
+    border-bottom: 1px solid rgba(201,168,76,0.4);
+  }
+  .portfolio-table th {
+    font-size: 10px;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--gold);
+    padding: 16px 24px;
+    text-align: left;
+    font-weight: 500;
+  }
+  .portfolio-table td {
+    padding: 28px 24px;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    vertical-align: top;
+  }
+  .portfolio-table tbody tr {
+    transition: all 0.3s ease;
+  }
+  .portfolio-table tbody tr:hover {
+    background: rgba(201,168,76,0.04);
+  }
+  .sol-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 4px;
+  }
+  .sol-tag {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #555;
+  }
+  .sol-desc { font-size: 13px; color: #AAA; line-height: 1.7; max-width: 360px; }
+  .sol-target {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(201,168,76,0.08);
+    border: 1px solid rgba(201,168,76,0.2);
+    padding: 6px 14px;
+    font-size: 11px;
+    color: var(--gold-light);
+    letter-spacing: 0.1em;
+  }
+
+  /* ─── SLIDE 6: DIFERENCIAL ─── */
+  #slide-6 {
+    background: linear-gradient(135deg, var(--charcoal) 0%, var(--charcoal-mid) 100%);
+  }
+  #slide-6 .inner {
+    max-width: 1200px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+  .diff-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .diff-item {
+    padding: 36px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+  }
+  .diff-item:last-child { border-bottom: none; }
+  .diff-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px;
+    color: var(--gold);
+    letter-spacing: 0.1em;
+    min-width: 28px;
+    margin-top: 2px;
+  }
+  .diff-content h4 {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--offwhite);
+    margin-bottom: 10px;
+  }
+  .diff-content p { font-size: 13px; color: #888; line-height: 1.7; }
+  .big-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 58px;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.2;
+    color: var(--offwhite);
+    position: relative;
+  }
+  .big-quote::before {
+    content: '"';
+    font-size: 160px;
+    color: rgba(201,168,76,0.08);
+    position: absolute;
+    top: -40px; left: -30px;
+    line-height: 1;
+    font-style: normal;
+  }
+  .big-quote em { color: var(--gold); font-style: italic; }
+
+  /* ─── SLIDE 7: DEPOIMENTOS ─── */
+  #slide-7 {
+    background: linear-gradient(180deg, var(--charcoal) 0%, var(--charcoal-mid) 100%);
+  }
+  #slide-7 .section-label { color: var(--gold); }
+  #slide-7 .section-title { color: var(--offwhite); }
+  #slide-7 .inner {
+    max-width: 1200px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+  }
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 60px;
+  }
+  .testimonial-card {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.04);
+    padding: 40px;
+    position: relative;
+    transition: all 0.4s ease;
+  }
+  .testimonial-card::before {
+    content: '"';
+    position: absolute;
+    top: 20px; left: 24px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 80px;
+    color: rgba(201,168,76,0.1);
+    line-height: 1;
+  }
+  .testimonial-card:hover {
+    background: rgba(201,168,76,0.04);
+    border-color: rgba(201,168,76,0.2);
+    transform: translateY(-4px);
+  }
+  .testimonial-text {
+    font-size: 14px;
+    color: #AAA;
+    line-height: 1.8;
+    font-style: italic;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 24px;
+  }
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+  .testimonial-avatar {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--charcoal);
+  }
+  .testimonial-info .name {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--offwhite);
+  }
+  .testimonial-info .role {
+    font-size: 11px;
+    color: #666;
+    margin-top: 2px;
+  }
+  .testimonial-info .company {
+    font-size: 10px;
+    color: var(--gold);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-top: 2px;
+  }
+
+  /* ─── SLIDE 8: VENDAS & HABILIDADES ─── */
+  #slide-8 { background: var(--offwhite); }
+  #slide-8 .section-label { color: var(--gold-dark); }
+  #slide-8 .section-title { color: var(--charcoal); }
+  #slide-8 .inner {
+    max-width: 1200px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+  }
+  .sales-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-top: 50px;
+  }
+  .sales-card {
+    background: var(--white);
+    border: 1px solid var(--offwhite-dark);
+    padding: 48px;
+    position: relative;
+    transition: all 0.3s ease;
+    overflow: hidden;
+  }
+  .sales-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 3px;
+    background: linear-gradient(90deg, var(--gold-dark), var(--gold-light));
+  }
+  .sales-card:hover {
+    border-color: rgba(201,168,76,0.3);
+    transform: translateY(-4px);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+  }
+  .sales-card .badge {
+    position: absolute;
+    top: 24px; right: 24px;
+    background: rgba(201,168,76,0.1);
+    border: 1px solid rgba(201,168,76,0.3);
+    color: var(--gold-dark);
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 4px 12px;
+  }
+  .sales-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 400;
+    color: var(--charcoal);
+    margin-bottom: 8px;
+  }
+  .sales-card .duration {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #999;
+    margin-bottom: 24px;
+  }
+  .sales-card p {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 24px;
+  }
+  .sales-card .modules {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid var(--offwhite-dark);
+  }
+  .sales-card .module {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 12px;
+    color: #555;
+  }
+  .sales-card .module::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background: var(--gold);
+    flex-shrink: 0;
+  }
+  .price-display {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-top: 24px;
+  }
+  .price-display .currency {
+    font-size: 14px;
+    color: var(--gold-dark);
+    font-weight: 500;
+  }
+  .price-display .amount {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 42px;
+    font-weight: 600;
+    color: var(--charcoal);
+    line-height: 1;
+  }
+  .price-display .per {
+    font-size: 12px;
+    color: #AAA;
+  }
+  .price-sub {
+    font-size: 11px;
+    color: var(--gold-dark);
+    margin-top: 6px;
+    letter-spacing: 0.1em;
+  }
+
+  /* ─── SLIDE 10: TREINAMENTOS ─── */
+  #slide-10 { background: var(--offwhite); }
+  #slide-10 .section-label { color: var(--gold-dark); }
+  #slide-10 .section-title { color: var(--charcoal); }
+  #slide-10 .inner {
+    max-width: 1200px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+  }
+  .training-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-top: 50px;
+  }
+  .training-card {
+    background: var(--white);
+    border: 1px solid var(--offwhite-dark);
+    padding: 40px;
+    position: relative;
+    transition: all 0.3s ease;
+    overflow: hidden;
+  }
+  .training-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 3px;
+    background: linear-gradient(90deg, var(--gold-dark), var(--gold-light));
+  }
+  .training-card:hover {
+    border-color: rgba(201,168,76,0.3);
+    transform: translateY(-4px);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+  }
+  .training-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 400;
+    color: var(--charcoal);
+    margin-bottom: 8px;
+  }
+  .training-card .duration {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #999;
+    margin-bottom: 24px;
+  }
+  .price-display {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-top: 24px;
+  }
+  .price-display .currency {
+    font-size: 14px;
+    color: var(--gold-dark);
+    font-weight: 500;
+  }
+  .price-display .amount {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 40px;
+    font-weight: 600;
+    color: var(--charcoal);
+    line-height: 1;
+  }
+  .price-display .per {
+    font-size: 12px;
+    color: #AAA;
+  }
+  .price-sub {
+    font-size: 11px;
+    color: var(--gold-dark);
+    margin-top: 6px;
+    letter-spacing: 0.1em;
+  }
+  .training-badge {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    background: rgba(201,168,76,0.1);
+    border: 1px solid rgba(201,168,76,0.3);
+    color: var(--gold-dark);
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 4px 12px;
+  }
+
+  /* ─── SLIDE 9: DESENVOLVIMENTO INDIVIDUAL ─── */
+  #slide-9 { background: var(--charcoal); }
+  #slide-9 .inner {
+    max-width: 1200px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+  }
+  .dev-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+    margin-top: 50px;
+    background: rgba(201,168,76,0.1);
+  }
+  .dev-card {
+    background: var(--charcoal);
+    padding: 48px 32px;
+    text-align: center;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  .dev-card:hover { background: var(--charcoal-mid); }
+  .dev-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  .dev-card:hover::before { opacity: 1; }
+  .dev-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--gold);
+    margin-bottom: 12px;
+    line-height: 1.2;
+  }
+  .dev-card .format {
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #555;
+    margin-bottom: 24px;
+  }
+  .dev-price {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--offwhite);
+    margin-bottom: 4px;
+  }
+  .dev-price-sub {
+    font-size: 11px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  .dev-card p { font-size: 12px; color: #777; line-height: 1.7; }
+
+  /* ─── SLIDE 12: CONSULTORIA ─── */
+  #slide-14 {
+    background: var(--charcoal-mid);
+    flex-direction: column;
+    text-align: center;
+  }
+  #slide-12 .inner {
+    max-width: 900px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+  }
+  .process-steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    margin-top: 60px;
+    position: relative;
+  }
+  .process-steps::before {
+    content: '';
+    position: absolute;
+    top: 60px;
+    left: calc(16.66% + 20px);
+    right: calc(16.66% + 20px);
+    height: 1px;
+    background: linear-gradient(90deg, var(--gold), rgba(201,168,76,0.2), var(--gold));
+  }
+  .process-step {
+    padding: 48px 32px;
+    text-align: center;
+    position: relative;
+  }
+  .step-circle {
+    width: 80px;
+    height: 80px;
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+    margin: 0 auto 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--charcoal-mid);
+    position: relative;
+    z-index: 1;
+  }
+  .step-circle span {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    font-weight: 300;
+    color: var(--gold);
+  }
+  .process-step h4 {
+    font-size: 12px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--offwhite);
+    margin-bottom: 16px;
+    font-weight: 600;
+  }
+  .process-step p { font-size: 13px; color: #777; line-height: 1.7; }
+
+  /* ─── SLIDE 13: CURRÍCULOS ─── */
+  #slide-13 { background: var(--charcoal-mid); }
+  #slide-13 .inner {
+    max-width: 1200px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+  }
+  .cv-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 50px;
+  }
+  .cv-card {
+    background: var(--charcoal);
+    border: 1px solid rgba(201,168,76,0.15);
+    padding: 32px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+  }
+  .cv-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+  }
+  .cv-avatar {
+    width: 64px;
+    height: 64px;
+    background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--charcoal);
+    margin-bottom: 20px;
+  }
+  .cv-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--offwhite);
+    margin-bottom: 4px;
+  }
+  .cv-role {
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+  }
+  .cv-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 16px;
+  }
+  .cv-skill {
+    font-size: 10px;
+    background: rgba(201,168,76,0.1);
+    color: var(--gold-light);
+    padding: 4px 10px;
+    letter-spacing: 0.1em;
+  }
+  .cv-exp {
+    font-size: 12px;
+    color: #777;
+    line-height: 1.6;
+  }
+  .cv-cta {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    text-decoration: none;
+    border-bottom: 1px solid var(--gold);
+    padding-bottom: 2px;
+  }
+  .cv-cta:hover { color: var(--offwhite); border-color: var(--offwhite); }
+
+  /* ─── SLIDE 14: CTA FINAL ─── */
+  #slide-14 {
+    background: var(--charcoal);
+    flex-direction: column;
+    text-align: center;
+  }
+  #slide-14::before {
+    content: '';
+    position: absolute;
+    bottom: -100px; left: 50%; transform: translateX(-50%);
+    width: 600px; height: 600px;
+    background: radial-gradient(ellipse at center, rgba(201,168,76,0.06) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  #slide-13 .inner {
+    max-width: 700px;
+    position: relative;
+    z-index: 1;
+  }
+  #slide-13 .section-title {
+    font-size: 60px;
+    text-align: center;
+    color: var(--offwhite);
+  }
+  .cta-sub {
+    font-size: 15px;
+    color: #888;
+    line-height: 1.9;
+    margin: 24px 0 48px;
+  }
+  .cta-button {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--gold-dark), var(--gold), var(--gold-light));
+    color: var(--charcoal);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    padding: 20px 56px;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  .cta-button::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, transparent, rgba(255,255,255,0.2), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.5s ease;
+  }
+  .cta-button:hover::before { transform: translateX(100%); }
+  .cta-button:hover { transform: translateY(-2px); box-shadow: 0 20px 60px rgba(201,168,76,0.3); }
+  .contact-info {
+    margin-top: 48px;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+  }
+  .contact-item .label {
+    font-size: 10px;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 8px;
+  }
+  .contact-item .value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--offwhite);
+  }
+  .footer-logo {
+    margin-top: 80px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: 0.5em;
+    color: rgba(201,168,76,0.3);
+    text-transform: uppercase;
+  }
+
+  /* ─── NAV DOTS ─── */
+  .nav-dots {
+    position: fixed;
+    right: 32px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 100;
+  }
+  .nav-dot {
+    width: 6px;
+    height: 6px;
+    border: 1px solid rgba(201,168,76,0.4);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: transparent;
+  }
+  .nav-dot.active {
+    background: var(--gold);
+    border-color: var(--gold);
+    box-shadow: 0 0 10px rgba(201,168,76,0.5);
+  }
+
+  /* ─── ANIMATIONS ─── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes shimmer {
+    0% { background-position: -200% center; }
+    100% { background-position: 200% center; }
+  }
+  .gold-shimmer {
+    background: linear-gradient(90deg, var(--gold-dark) 0%, var(--gold-light) 50%, var(--gold-dark) 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shimmer 4s linear infinite;
+  }
+
+  /* Scroll fade in */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 900px) {
+    #slide-2 .inner, #slide-3 .inner, #slide-6 .inner { grid-template-columns: 1fr; gap: 40px; }
+    .pillars-grid { grid-template-columns: 1fr; }
+    .training-grid { grid-template-columns: 1fr; }
+    .dev-grid { grid-template-columns: repeat(2, 1fr); }
+    .process-steps { grid-template-columns: 1fr; }
+    .logo-mark { font-size: 60px; }
+    .section-title { font-size: 36px; }
+    .slide { padding: 60px 30px; }
+  }
+  @media (max-width: 768px) {
+    .nav-dots { display: none; }
+    .logo-mark { font-size: 48px; }
+    .logo-mark span { font-size: 11px; }
+    .hero-tagline { font-size: 20px; }
+    .section-title { font-size: 32px; }
+    .slide { padding: 50px 24px; }
+    .pillars-grid { grid-template-columns: 1fr; }
+    .testimonials-grid { grid-template-columns: 1fr; }
+    .sales-grid { grid-template-columns: 1fr; }
+    .training-grid { grid-template-columns: 1fr; }
+    .dev-grid { grid-template-columns: 1fr; }
+    .process-steps { grid-template-columns: 1fr; }
+    .stat-row { flex-direction: column; gap: 24px; }
+    .contact-info { flex-direction: column; gap: 24px; }
+    .big-quote { font-size: 36px; }
+    #slide-1::before { width: 400px; height: 400px; }
+  }
+  @media (max-width: 480px) {
+    .logo-mark { font-size: 36px; }
+    .section-title { font-size: 28px; }
+    .slide { padding: 40px 20px; }
+    .founder-card { padding: 32px 24px; }
+    .training-card, .sales-card { padding: 32px 24px; }
+    .price-display .amount { font-size: 32px; }
+    .dev-price { font-size: 28px; }
+    .cta-button { padding: 16px 32px; font-size: 10px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+    html { scroll-behavior: auto; }
+  }
+
+  /* ─── ATALHOS MENU ─── */
+  .atalhos-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(26,26,26,0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(201,168,76,0.2);
+    z-index: 200;
+    padding: 16px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transform: translateY(-100%);
+    transition: transform 0.4s ease;
+  }
+  .atalhos-menu.visible { transform: translateY(0); }
+  .atalhos-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 0.3em;
+    color: var(--gold);
+    text-decoration: none;
+  }
+  .atalhos-links {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  .atalhos-link {
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--offwhite);
+    text-decoration: none;
+    padding: 8px 12px;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+  }
+  .atalhos-link:hover, .atalhos-link:focus {
+    color: var(--gold);
+    border-color: rgba(201,168,76,0.3);
+  }
+  @media (max-width: 768px) {
+    .atalhos-menu { padding: 12px 20px; }
+    .atalhos-links { display: none; }
+    .atalhos-menu::after {
+      content: '☰';
+      font-size: 20px;
+      color: var(--gold);
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV DOTS -->
+<nav class="nav-dots" id="navDots" aria-label="Navegação dos slides"></nav>
+
+<!-- ATALHOS MENU -->
+<header class="atalhos-menu" id="atalhosMenu">
+  <a href="#slide-1" class="atalhos-logo">ELEVAR</a>
+  <nav class="atalhos-links" aria-label="Menu de atalhos">
+    <a href="#slide-2" class="atalhos-link">Propósito</a>
+    <a href="#slide-3" class="atalhos-link">Fundador</a>
+    <a href="#slide-4" class="atalhos-link">Pilares</a>
+    <a href="#slide-5" class="atalhos-link">Serviços</a>
+    <a href="#slide-7" class="atalhos-link">Depoimentos</a>
+    <a href="#slide-8" class="atalhos-link">Vendas</a>
+    <a href="#slide-10" class="atalhos-link">Corporativo</a>
+    <a href="#slide-9" class="atalhos-link">Individual</a>
+    <a href="#slide-13" class="atalhos-link">Currículos</a>
+    <a href="#slide-14" class="atalhos-link">Contato</a>
+  </nav>
+</header>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- SLIDE 1: CAPA -->
+<!-- ═══════════════════════════════════════════ -->
+<section class="slide" id="slide-1" data-label="Início">
+  <div class="noise"></div>
+  <div class="corner-ornament tl"></div>
+  <div class="corner-ornament tr"></div>
+  <div class="corner-ornament bl"></div>
+  <div class="corner-ornament br"></div>
+
+  <div class="logo-mark gold-shimmer" style="animation: fadeUp 1.2s ease forwards;">
+    ELEVAR
+    <span>Gestão & Performance Humana</span>
+  </div>
+  <div class="gold-line"></div>
+  <p class="hero-tagline">Transformando potencial humano em<br>performance corporativa de alto nível</p>
+  <div style="height:40px"></div>
+  <p class="hero-sub">Treinamentos · Consultoria · Desenvolvimento Executivo</p>
+</section>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- SLIDE 2: PROPÓSITO -->
+<!-- ═══════════════════════════════════════════ -->
+<section class="slide" id="slide-2" data-label="Propósito">
+  <div class="noise"></div>
+  <div class="corner-ornament tl"></div>
+  <div class="corner-ornament br"></div>
+  <div class="inner">
+    <div>
+      <p class="section-label reveal">Nosso Propósito</p>
+      <h2 class="section-title reveal">No cenário atual,<br>o diferencial é <em>humano</em></h2>
+      <div class="gold-line-left reveal"></div>
+      <p class="body-text reveal">Empresas não sofrem apenas por falta de técnica. Sofrem por <strong style="color:var(--offwhite)">lacunas de comportamento</strong> e processos ineficientes. A liderança despreparada custa mais do que qualquer despesa operacional.</p>
+
+      <div class="quote-block reveal">
+        <p>"A ELEVAR nasceu para ser a ponte entre o potencial humano e a performance corporativa de alto nível."</p>
+      </div>
+
+      <p class="body-text reveal">Combinamos a sensibilidade do comportamento humano à precisão da gestão estratégica para entregar resultados reais e mensuráveis em cada organização que atendemos.</p>
+    </div>
+    <div style="position:relative">
+      <div class="vertical-divider"></div>
+      <div style="padding-left: 60px;">
+        <p class="section-label reveal">Nossa Missão</p>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:300;color:var(--offwhite);line-height:1.4;margin-bottom:32px;" class="reveal">Integrar inteligência comportamental à gestão estratégica para maximizar o ROI de cada colaborador</h3>
+        <div class="stat-row reveal">
+          <div class="stat-item">
+            <div class="num">+10</div>
+            <div class="lbl">Anos de Experiência</div>
+          </div>
+          <div class="stat-item">
+            <div class="num">B2B</div>
+            <div class="lbl">Foco Corporativo</div>
+          </div>
+          <div class="stat-item">
+            <div class="num">4×</div>
+            <div class="lbl">Soluções Integradas</div>
+          </div>
+        </div>
+        <div style="margin-top:40px;padding-top:40px;border-top:1px solid rgba(255,255,255,0.06);" class="reveal">
+          <p class="section-label">Modelo de Atuação</p>
+          <div style="display:flex;flex-direction:column;gap:12px;margin-top:16px;">
+            <div style="display:flex;align-items:center;gap:12px;">
+              <div style="width:6px;height:6px;background:var(--gold);flex-shrink:0;"></div>
+              <p style="font-size:13px;color:#AAA;">Diagnóstico Profundo da Organização</p>
+            </div>
+            <div style="display:flex;align-items:center;gap:12px;">
+              <div style="width:6px;height:6px;background:var(--gold);flex-shrink:0;"></div>
+              <p style="font-size:13px;color:#AAA;">Treinamento Customizado por Área</p>
+            </div>
+            <div style="display:flex;align-items:center;gap:12px;">
+              <div style="width:6px;height:6px;background:var(--gold);flex-shrink:0;"></div>
+              <p style="font-size:13px;color:#AAA;">Implementação com Acompanhamento</p>
+            </div>
+            <div style="display:flex;align-items:center;gap:12px;">
+              <div style="width:6px;height:6px;background:var(--gold);flex-shrink:0;"></div>
+              <p style="font-size:13px;color:#AAA;">Mensuração de Resultados (KPIs)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- SLIDE 3: FUNDADOR -->
+<!-- ═══════════════════════════════════════════ -->
+<section class="slide" id="slide-3" data-label="Fundador">
+  <div class="noise"></div>
+  <div class="corner-ornament tl"></div>
+  <div class="corner-ornament br"></div>
+  <div class="inner">
+    <div class="founder-card reveal">
+      <img src="imagem modelo.jpg" alt="Jefferson Malaguti - Fundador e CEO da ELEVAR" class="founder-avatar" style="width:120px;height:120px;border-radius:50%;object-fit:cover;border:3px solid rgba(201,168,76,0.4);" loading="lazy" decoding="async">
+      <h3 class="founder-name">Jefferson Malaguti</h3>
+      <p class="founder-title">Fundador & CEO</p>
+      <p class="founder-role">Especialista em coaching e desenvolvimento humano com sólida trajetória em aceleração de resultados corporativos. Sua metodologia alia ciência comportamental a estratégia de negócios.</p>
+      <span class="founder-badge">Consultor Executivo</span>
+      <div style="margin-top: 28px; padding-top: 24px; border-top: 1px solid rgba(201,168,76,0.15);">
+        <div style="display:flex;justify-content:center;gap:24px;">
+          <div style="text-align:center;">
+            <div style="font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--gold);">C-Level</div>
+            <div style="font-size:10px;letter-spacing:0.2em;color:#555;text-transform:uppercase;margin-top:4px;">Clientes</div>
+          </div>
+          <div style="width:1px;background:rgba(201,168,76,0.15);"></div>
+          <div style="text-align:center;">
+            <div style="font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--gold);">MIP</div>
+            <div style="font-size:10px;letter-spacing:0.2em;color:#555;text-transform:uppercase;margin-top:4px;">Metodologia</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <p class="section-label reveal">Quem Somos</p>
+      <h2 class="section-title reveal">Consultoria especializada.<br>Missão <em>clara</em>.</h2>
+      <div class="gold-line-left reveal"></div>
+      <p class="body-text reveal" style="margin-bottom:32px;">Somos uma consultoria que une <strong style="color:var(--offwhite)">inteligência comportamental</strong> à precisão estratégica. Não entregamos apenas treinamentos — construímos culturas de alta performance duradouras.</p>
+      <div class="pillars-list">
+        <div class="pillar-item reveal">
+          <span class="pillar-num">01</span>
+          <div class="pillar-text">
+            <h4>Desenvolvimento de Lideranças</h4>
+            <p>Formação de gestores capazes de inspirar, engajar e alcançar metas com consistência.</p>
+          </div>
+        </div>
+        <div class="pillar-item reveal">
+          <span class="pillar-num">02</span>
+          <div class="pillar-text">
+            <h4>Otimização de Fluxos Gerenciais</h4>
+            <p>Mapeamento e reestruturação de processos para máxima eficiência operacional.</p>
+          </div>
+        </div>
+        <div class="pillar-item reveal">
+          <span class="pillar-num">03</span>
+          <div class="pillar-text">
+            <h4>ROI de Pessoas</h4>
+            <p>Cada intervenção é desenhada para gerar retorno mensurável sobre o capital humano.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- SLIDE 4: PILARES -->
+<!-- ═══════════════════════════════════════════ -->
+<section class="slide" id="slide-4" data-label="Pilares">
+  <div class="inner">
+    <div>
+      <p class="section-label reveal">Metodologia</p>
+      <h2 class="section-title reveal">Três pilares para<br>transformação <em style="color:var(--gold-dark)">real</em></h2>
+      <div class="gold-line-left reveal" style="background:linear-gradient(90deg,var(--gold-dark),transparent);"></div>
+      <p class="body-text reveal" style="color:#666;max-width:600px;">Nossa metodologia sustenta-se em três eixos fundamentais que, quando integrados, produzem mudanças organizacionais sustentáveis e resultados financeiros concretos.</p>
+    </div>
+    <div class="pillars-grid reveal">
+      <div class="pillar-card">
+        <div class="pillar-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3>Liderança &amp; Comportamento</h3>
+        <p>Treinamentos customizados para transformar grupos em equipes de alta performance através de palestras e workshops imersivos de alto impacto.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <h3>Eficiência de Processos</h3>
+        <p>Diagnóstico e estruturação de processos gerenciais para eliminar gargalos, aumentar a previsibilidade de resultados e reduzir retrabalho.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <h3>Cultura de Excelência</h3>
+        <p>Alinhamento estratégico entre visão executiva e execução operacional para sustentabilidade dos resultados no longo prazo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- SLIDE 5: PORTFÓLIO -->
+<!-- ═══════════════════════════════════════════ -->
+<section class="slide" id="slide-5" data-label="Portfólio">
+  <div class="noise"></div>
+  <div class="corner-ornament tl"></div>
+  <div class="corner-ornament br"></div>
+  <div class="inner">
+    <p class="section-label reveal">Soluções Disponíveis</p>
+    <h2 class="section-title reveal">Portfólio de <em>Soluções</em></h2>
+    <div class="gold-line-left reveal"></div>
+    <table class="portfolio-table reveal">
+      <thead>
+        <tr>
+          <th>Solução</th>
+          <th>Descrição</th>
+          <th>Público-Alvo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <span class="sol-name">Keynote Speaking</span>
+            <span class="sol-tag">Palestras de Impacto</span>
+          </td>
+          <td><p class="sol-desc">Palestras magnéticas sobre liderança, resiliência e inteligência emocional para mobilizar audiências e catalisar mudanças culturais.</p></td>
+          <td><span class="sol-target">Eventos Corporativos &amp; Convenções</span></td>
+        </tr>
+        <tr>
+          <td>
+            <span class="sol-name">High Performance Training</span>
+            <span class="sol-tag">Workshops Imersivos</span>
+          </td>
+          <td><p class="sol-desc">Workshops focados em competências comportamentais (Soft Skills) com metodologia andragógica aplicada à realidade corporativa.</p></td>
+          <td><span class="sol-target">Gestores &amp; Equipes de Vendas</span></td>
+        </tr>
+        <tr>
+          <td>
+            <span class="sol-name">Consultoria Gerencial</span>
+            <span class="sol-tag">Processos &amp; KPIs</span>
+          </td>
+          <td><p class="sol-desc">Reestruturação de processos internos e implantação de indicadores estratégicos com acompanhamento para garantir a sustentabilidade.</p></td>
+          <td><span class="sol-target">Diretoria &amp; Gerência Média</span></td>
+        </tr>
+        <tr>
+          <td>
+            <span class="sol-name">Executive Mentoring</span>
+            <span class="sol-tag">1:1 de Alto Nível</span>
+          </td>
+          <td><p class="sol-desc">Acompanhamento individual de alto impacto para sucessores e executivos de alto escalão acelerarem sua evolução estratégica.</p></td>
+          <td><span class="sol-target">C-Level &amp; Empreendedores</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- SLIDE 6: DIFERENCIAIS -->
+<!-- ═══════════════════════════════════════════ -->
+<section class="slide" id="slide-6" data-label="Diferenciais">
+  <div class="noise"></div>
+  <div class="corner-ornament tl"></div>
+  <div class="corner-ornament br"></div>
+  <div class="inner">
+    <div>
+      <p class="section-label reveal">Por que Elevar?</p>
+      <h2 class="section-title reveal">Nossos<br><em>Diferenciais</em></h2>
+      <div class="gold-line-left reveal"></div>
+      <div class="diff-grid">
+        <div class="diff-item reveal">
+          <span class="diff-num">→</span>
+          <div class="diff-content">
+            <h4>Andragogia Aplicada</h4>
+            <p>Ensino para adultos integrado à prática real do dia a dia corporativo. Aprendizagem que gera mudança imediata de comportamento.</p>
+          </div>
+        </div>
+        <div class="diff-item reveal">
+          <span class="diff-num">→</span>
+          <div class="diff-content">
+            <h4>Personalização Total</h4>
+            <p>Cada treinamento é desenhado após diagnóstico profundo da cultura, desafios e objetivos específicos do cliente.</p>
+          </div>
+        </div>
+        <div class="diff-item reveal">
+          <span class="diff-num">→</span>
+          <div class="diff-content">
+            <h4>Foco em ROI Mensurável</h4>
+            <p>Intervenções voltadas para melhoria do clima organizacional e resultados financeiros concretos. Não é custo — é investimento.</p>
+          </div>
+        </div>
+        <div class="diff-item reveal">
+          <span class="diff-num">→</span>
+          <div class="diff-content">
+            <h4>Sustentabilidade de Resultados</h4>
+            <p>Acompanhamento pós-treinamento para garantir que as mudanças se consolidem na cultura da organização.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="reveal">
+      <div class="big-quote">
+        Não entregamos apenas treinamentos; entregamos a evolução da sua <em>cultura organizacional</em>
+      </div>
+      <div style="margin-top:48px;padding:32px;border:1px solid rgba(201,168,76,0.15);background:rgba(201,168,76,0.04);">
+        <p style="font-size:10px;letter-spacing:0.4em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;">Nosso Compromisso</p>
+        <p style="font-size:14px;color:#AAA;line-height:1.8;">Cada projeto tem início com um diagnóstico honesto e termina com resultados documentados. Nossa reputação é construída em cima de transformações reais, não de promessas vazias.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- SLIDE 7: DEPOIMENTOS -->
+<!-- ═══════════════════════════════════════════ -->
+<section class="slide" id="slide-7" data-label="Depoimentos">
+  <div class="noise"></div>
+  <div class="corner-ornament tl"></div>
+  <div class="corner-ornament br"></div>
+  <div class="inner">
+    <p class="section-label reveal" style="text-align:center;">O que dizem nossos clientes</p>
+    <h2 class="section-title reveal" style="text-align:center;">Depoimentos</h2>
+    <div class="gold-line reveal"></div>
+    <p class="body-text reveal" style="text-align:center;max-width:600px;margin:0 auto 0;">A transformação real acontece quando os resultados falam por si. Estas são algumas histórias de sucesso das organizações que elevamos junto.</p>
+    <div class="testimonials-grid reveal">
+      <div class="testimonial-card">
+        <p class="testimonial-text">"Depois do treinamento de liderança, nossa equipe de gestores mudou completamente a forma de conduzir reuniões e dar feedbacks. O resultado? Crescimento de 47% em engajamento e redução de 60% turnover."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">RS</div>
+          <div class="testimonial-info">
+            <div class="name">Roberto Santana</div>
+            <div class="role">Diretor Geral</div>
+            <div class="company">Grupo Vital</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <p class="testimonial-text">"A consultoria transformou nossa operação. Mapeamos gargalos que nem sabíamos existir e reconstruímos processos que triplicaram nossa produtividade em 6 meses."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">ML</div>
+          <div class="testimonial-info">
+            <div class="name">Mariana Lima</div>
+            <div class="role">CEO</div>
+            <div class="company">Innovare Tech</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <p class="testimonial-text">"O coaching executivo foi divisor de águas na minha carreira. Em 3 meses, consegui estruturar minha liderança e bater metas que pareciam impossíveis. Investimento que se pagou várias vezes."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">AP</div>
+          <div class="testimonial-info">
+            <div class="name">André Pereira</div>
+            <div class="role">Diretor Comercial</div>
+            <div class="company">Stark Industries</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- SLIDE 8: VENDAS & HABILIDADES -->
+<!-- ══��════════════════════════════════════════ -->
+<section class="slide" id="slide-8" data-label="Vendas">
+  <div class="inner">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:24px;">
+      <div>
+        <p class="section-label reveal">Prospecção & Vendas</p>
+        <h2 class="section-title reveal">Vendas<br>& <em style="color:var(--gold-dark)">Habilidades</em></h2>
+        <div class="gold-line-left reveal" style="background:linear-gradient(90deg,var(--gold-dark),transparent);"></div>
+      </div>
+      <p class="reveal" style="font-size:12px;color:#999;font-style:italic;max-width:280px;padding-bottom:8px;">* Valores para turmas de até 25 participantes. Projetos maiores sob consulta.</p>
+    </div>
+    <div class="sales-grid">
+      <div class="sales-card reveal">
+        <span class="badge">16 Horas</span>
+        <h3>Prospecção de Alta performance</h3>
+        <div class="duration">2 Dias · Turma até 25 pessoas</div>
+        <p>Metodologia completa de prospecção ativa para transformar sua equipe comercial em uma máquina de gerar leads qualificados e converter oportunidades.</p>
+        <div class="modules">
+          <div class="module">Análise comportamental do comprador</div>
+          <div class="module">Técnicas de abordagem e qualificação BANT</div>
+          <div class="module">Prospecção multicanal (LinkedIn, e-mail, telefone)</div>
+          <div class="module">Construção de autoridade e rapport</div>
+          <div class="module">Fechamento consultivo</div>
+        </div>
+        <div class="price-display">
+          <span class="currency">R$</span>
+          <span class="amount">7.800</span>
+          <span class="per">/turma</span>
+        </div>
+        <p class="price-sub">R$ 487,00 / hora</p>
+      </div>
+      <div class="sales-card reveal">
+        <span class="badge">8 Horas</span>
+        <h3>Negociação Avançada</h3>
+        <div class="duration">1 Dia Completo · Turma até 25 pessoas</div>
+        <p>Técnicas de negociação para fechar deals de alto valor. Aprenda a ler sinais, estruturar propostas irrecusáveis e eliminar objeções.</p>
+        <div class="modules">
+          <div class="module">Psicologia da decisão de compra</div>
+          <div class="module">Técnicas de anchoring e escassez</div>
+          <div class="module">Gestão de objeções avançada</div>
+          <div class="module">Fechamento alternativo e gancho</div>
+          <div class="module">Negociação B2B de alto ticket</div>
+        </div>
+        <div class="price-display">
+          <span class="currency">R$</span>
+          <span class="amount">5.200</span>
+          <span class="per">/turma</span>
+        </div>
+        <p class="price-sub">R$ 650,00 / hora</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- SLIDE 10: TREINAMENTOS B2B -->
+<!-- ═══════════════════════════════════════════ -->
+<section class="slide" id="slide-10" data-label="Corporativo">
+  <div class="inner">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:24px;">
+      <div>
+        <p class="section-label reveal">Corporativo</p>
+        <h2 class="section-title reveal">Treinamentos<br>&amp; <em style="color:var(--gold-dark)">Workshops</em></h2>
+        <div class="gold-line-left reveal" style="background:linear-gradient(90deg,var(--gold-dark),transparent);"></div>
+      </div>
+      <p class="reveal" style="font-size:12px;color:#999;font-style:italic;max-width:280px;padding-bottom:8px;">* Valores para turmas de até 25 participantes. Projetos maiores sob consulta.</p>
+    </div>
+    <div class="training-grid">
+      <div class="training-card reveal">
+        <span class="training-badge">8 Horas</span>
+        <h3>Liderança em Alta Performance</h3>
+        <div class="duration">1 Dia Completo · Turma até 25 pessoas</div>
+        <p style="font-size:13px;color:#888;line-height:1.7;">Desenvolvimento acelerado de competências de liderança para gestores que precisam engajar equipes e alcançar resultados com consistência.</p>
+        <div class="price-display">
+          <span class="currency">R$</span>
+          <span class="amount">5.200</span>
+          <span class="per">/turma</span>
+        </div>
+        <p class="price-sub">R$ 650,00 / hora · Melhor custo-benefício</p>
+      </div>
+      <div class="training-card reveal">
+        <span class="training-badge">8 Horas</span>
+        <h3>Vendedor Campeão</h3>
+        <div class="duration">1 Dia Completo · Turma até 25 pessoas</div>
+        <p style="font-size:13px;color:#888;line-height:1.7;">Metodologia intensiva para transformar equipes comerciais em máquinas de vendas através de técnicas comportamentais e de persuasão ética.</p>
+        <div class="price-display">
+          <span class="currency">R$</span>
+          <span class="amount">4.400</span>
+          <span class="per">/turma</span>
+        </div>
+        <p class="price-sub">R$ 550,00 / hora</p>
+      </div>
+      <div class="training-card reveal">
+        <span class="training-badge">4 Horas</span>
+        <h3>Gestão Emocional Aplicada</h3>
+        <div class="duration">Meio Período · Turma até 25 pessoas</div>
+        <p style="font-size:13px;color:#888;line-height:1.7;">Ferramentas práticas de regulação emocional para líderes e colaboradores manterem alta performance em ambientes de pressão e incerteza.</p>
+        <div class="price-display">
+          <span class="currency">R$</span>
+          <span class="amount">3.400</span>
+          <span class="per">/turma</span>
+        </div>
+        <p class="price-sub">R$ 425,00 / hora</p>
+      </div>
+      <div class="training-card reveal">
+        <span class="training-badge">4 Horas</span>
+        <h3>Atendimento Humanizado</h3>
+        <div class="duration">Meio Período · Turma até 25 pessoas</div>
+        <p style="font-size:13px;color:#888;line-height:1.7;">Capacitação para equipes de front-end criarem experiências memoráveis ao cliente, elevando NPS e fidelização com empatia estratégica.</p>
+        <div class="price-display">
+          <span class="currency">R$</span>
+          <span class="amount">3.400</span>
+          <span class="per">/turma</span>
+        </div>
+        <p class="price-sub">R$ 425,00 / hora</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- SLIDE 8: DESENVOLVIMENTO INDIVIDUAL -->
+<!-- ═══════════════════════════════════════════ -->
+<section class="slide" id="slide-9" data-label="Individual">
+  <div class="noise"></div>
+  <div class="corner-ornament tl"></div>
+  <div class="corner-ornament br"></div>
+  <div class="inner">
+    <p class="section-label reveal">Foco no Indivíduo</p>
+    <h2 class="section-title reveal">Desenvolvimento <em>Individual</em></h2>
+    <div class="gold-line-left reveal"></div>
+    <p class="body-text reveal" style="max-width:600px;margin-bottom:0;">Soluções personalizadas para executivos, gestores e colaboradores que buscam evolução acelerada com suporte especializado contínuo.</p>
+    <div class="dev-grid reveal">
+      <div class="dev-card">
+        <h3>Coaching Executivo</h3>
+        <div class="format">10 Sessões · Pacote</div>
+        <div class="dev-price">R$ 4.997</div>
+        <div class="dev-price-sub">pacote completo</div>
+        <p>Para Gestores: Foco em KPIs e metas estratégicas relacionais. Acompanhamento de alta intensidade para resultados rápidos.</p>
+      </div>
+      <div class="dev-card">
+        <h3>Processo Terapêutico</h3>
+        <div class="format">Sessão Avulsa</div>
+        <div class="dev-price">R$ 280</div>
+        <div class="dev-price-sub">por sessão</div>
+        <p>Para Colaboradores: Suporte individual para equipes. Saúde mental como vantagem competitiva organizacional.</p>
+      </div>
+      <div class="dev-card">
+        <h3>Plantão Elevar</h3>
+        <div class="format">4h/Semana · Mensal</div>
+        <div class="dev-price">R$ 4.500</div>
+        <div class="dev-price-sub">por mês</div>
+        <p>Suporte contínuo para gestão. Disponibilidade estratégica para resolver desafios em tempo real.</p>
+      </div>
+      <div class="dev-card">
+        <h3>Processo Gerencial</h3>
+        <div class="format">10 Sessões · Pacote</div>
+        <div class="dev-price">R$ 4.997</div>
+        <div class="dev-price-sub">pacote completo</div>
+        <p>Foco em desenvolvimento profissional com suporte técnico. Para líderes em transição ou expansão de responsabilidades.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- SLIDE 11: CONSULTORIA & PROCESSOS -->
+<!-- ═══════════════════════════════════════════ -->
+<section class="slide" id="slide-11" data-label="Consultoria">
+  <div class="noise"></div>
+  <div class="inner">
+    <p class="section-label reveal" style="text-align:center;">Projetos Estratégicos</p>
+    <h2 class="section-title reveal" style="text-align:center;font-size:52px;">Consultoria<br>&amp; <em>Processos</em></h2>
+    <div class="gold-line reveal"></div>
+    <p class="body-text reveal" style="text-align:center;max-width:600px;margin:0 auto 0;">Projetos focados na estrutura e eficiência operacional da sua organização. Metodologia em três etapas sequenciais para garantir resultados sustentáveis.</p>
+    <div class="process-steps">
+      <div class="process-step reveal">
+        <div class="step-circle"><span>01</span></div>
+        <h4>Diagnóstico Inicial</h4>
+        <p>Análise profunda dos processos atuais, mapeamento de gargalos e identificação de oportunidades de crescimento na operação.</p>
+      </div>
+      <div class="process-step reveal">
+        <div class="step-circle"><span>02</span></div>
+        <h4>Reestruturação</h4>
+        <p>Desenho de novos fluxos operacionais, implantação de indicadores estratégicos (KPIs) e alinhamento das equipes envolvidas.</p>
+      </div>
+      <div class="process-step reveal">
+        <div class="step-circle"><span>03</span></div>
+        <h4>Acompanhamento</h4>
+        <p>Suporte consultivo durante a fase de execução para garantir a sustentabilidade dos resultados e a consolidação da nova cultura.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- SLIDE 13: CURRÍCULOS -->
+<!-- ═══════════════════════════════════════════ -->
+<section class="slide" id="slide-13" data-label="Currículos">
+  <div class="noise"></div>
+  <div class="corner-ornament tl"></div>
+  <div class="corner-ornament br"></div>
+  <div class="inner">
+    <p class="section-label reveal" style="text-align:center;">Banco de Talentos</p>
+    <h2 class="section-title reveal" style="text-align:center;">Currículos <em>Disponíveis</em></h2>
+    <div class="gold-line reveal"></div>
+    <p class="body-text reveal" style="text-align:center;max-width:600px;margin:0 auto 0;">Profissionais selecionados e preparados para alta performance. Candidate-se ou contrate talent.</p>
+    <div class="cv-grid reveal">
+      <a href="ana-maria.html" class="cv-card">
+        <div class="cv-avatar">AM</div>
+        <h3 class="cv-name">Ana Maria</h3>
+        <p class="cv-role">Gerente Comercial</p>
+        <div class="cv-skills">
+          <span class="cv-skill">Vendas</span>
+          <span class="cv-skill">Gestão de Equipe</span>
+          <span class="cv-skill">CRM</span>
+        </div>
+        <p class="cv-exp">8 anos de experiência em vendas B2B. Especializada em gestão de equipes de alta performance.</p>
+        <span class="cv-cta">Ver perfil →</span>
+      </div>
+      <a href="joao-carlos.html" class="cv-card">
+        <div class="cv-avatar">JC</div>
+        <h3 class="cv-name">João Carlos</h3>
+        <p class="cv-role">Coordenador de Ops</p>
+        <div class="cv-skills">
+          <span class="cv-skill">Operações</span>
+          <span class="cv-skill">Processos</span>
+          <span class="cv-skill">Lean</span>
+        </div>
+        <p class="cv-exp">6 anos em logística e operações. Vivência em melhoria de processos e redução de custos.</p>
+        <span class="cv-cta">Ver perfil →</span>
+      </div>
+      <a href="paula-silva.html" class="cv-card">
+        <div class="cv-avatar">PS</div>
+        <h3 class="cv-name">Paula Silva</h3>
+        <p class="cv-role">Gestora de Pessoas</p>
+        <div class="cv-skills">
+          <span class="cv-skill">RH</span>
+          <span class="cv-skill">Recrutamento</span>
+          <span class="cv-skill">Clima</span>
+        </div>
+        <p class="cv-exp">9 anos em recursos humanos. Especialidade em recrutamento e desenvolvimento de lideranças.</p>
+        <span class="cv-cta">Ver perfil →</span>
+      </div>
+    </div>
+    <div class="reveal" style="text-align:center;margin-top:48px;">
+      <a href="https://wa.me/5518996272190?text=Olá,%20gostaria%20de%20cadastrar%20meu%20currículo%20na%20ELEVAR" class="cta-button" style="background:transparent;border:1px solid var(--gold);color:var(--gold);">Enviar meu Currículo</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- SLIDE 14: CTA FINAL -->
+<!-- ═══════════════════════════════════════════ -->
+<section class="slide" id="slide-14" data-label="Contato">
+  <div class="noise"></div>
+  <div class="corner-ornament tl"></div>
+  <div class="corner-ornament tr"></div>
+  <div class="corner-ornament bl"></div>
+  <div class="corner-ornament br"></div>
+  <div class="inner">
+    <p class="section-label reveal" style="text-align:center;font-size:11px;letter-spacing:0.6em;">Próximo Passo</p>
+    <h2 class="section-title reveal" style="font-size:60px;text-align:center;color:var(--offwhite);">Vamos elevar o nível<br>do seu <em>negócio?</em></h2>
+    <div class="gold-line reveal"></div>
+    <p class="cta-sub reveal">Converse diretamente com Jefferson e descubra como transformamos lideranças e processos em vantagem competitiva real e mensurável para a sua organização.</p>
+    <div class="reveal">
+      <a href="https://wa.me/5518996272190?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20os%20treinamentos%20da%20ELEVAR" target="_blank" rel="noopener noreferrer" class="cta-button" aria-label="Agendar reunião pelo WhatsApp">
+        Falar no WhatsApp
+      </a>
+    </div>
+    <div class="contact-info reveal">
+      <div class="contact-item">
+        <div class="label">Fundador</div>
+        <div class="value">Jefferson Malaguti</div>
+      </div>
+      <div class="contact-item">
+        <div class="label">Empresa</div>
+        <div class="value">ELEVAR Business</div>
+      </div>
+      <div class="contact-item">
+        <div class="label">Especialidade</div>
+        <div class="value">Gestão &amp; Performance</div>
+      </div>
+    </div>
+    <div class="footer-logo">ELEVAR</div>
+  </div>
+</section>
+
+<script>
+  // Build nav dots
+  const slides = document.querySelectorAll('.slide');
+  const navDots = document.getElementById('navDots');
+  slides.forEach((slide, i) => {
+    const dot = document.createElement('div');
+    dot.className = 'nav-dot' + (i === 0 ? ' active' : '');
+    dot.title = slide.dataset.label || '';
+    dot.addEventListener('click', () => {
+      slide.scrollIntoView({ behavior: 'smooth' });
+    });
+    navDots.appendChild(dot);
+  });
+
+  // Update active dot on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const idx = Array.from(slides).indexOf(entry.target);
+        document.querySelectorAll('.nav-dot').forEach((d, i) => {
+          d.classList.toggle('active', i === idx);
+        });
+      }
+    });
+  }, { threshold: 0.5 });
+  slides.forEach(s => observer.observe(s));
+
+  // Atalho menu - mostra quando scroll passa do primeiro slide
+  const atalhosMenu = document.getElementById('atalhosMenu');
+  const atalhosObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      atalhosMenu.classList.toggle('visible', !entry.isIntersecting);
+    });
+  }, { threshold: 0 });
+  atalhosObserver.observe(document.getElementById('slide-1'));
+
+  // Reveal on scroll
+  const reveals = document.querySelectorAll('.reveal');
+  const revealObs = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add('visible');
+        }, 100);
+      }
+    });
+  }, { threshold: 0.1 });
+  reveals.forEach(r => revealObs.observe(r));
+</script>
+</body>
+</html>
