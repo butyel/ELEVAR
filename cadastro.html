@@ -328,12 +328,23 @@
     }
 
     function enviarParaSheet(formData, fotoBase64) {
-      // URL do Google Apps Script
       const scriptURL = 'https://script.google.com/macros/s/AKfycbwvtc1JVeFg8P3UCoqG1dZBlXZO_aKbCAVcEvxyWVjZuxBC66WLCJDa801smdC1gMqb/exec';
       
-      // Preparar dados
-      let dados = {
-        timestamp: new Date().toISOString(),
+      // Criar iframe oculto para evitar CORS
+      const frameName = 'frame_' + Date.now();
+      const iframe = document.createElement('iframe');
+      iframe.name = frameName;
+      iframe.style.display = 'none';
+      document.body.appendChild(iframe);
+      
+      // Criar formulário que envia para o iframe
+      const form = document.createElement('form');
+      form.method = 'POST';
+      form.action = scriptURL;
+      form.target = frameName;
+      form.style.display = 'none';
+      
+      const campos = {
         nome: formData.get('nome'),
         email: formData.get('email'),
         telefone: formData.get('telefone'),
@@ -348,30 +359,26 @@
         resumo: formData.get('resumo'),
         foto: fotoBase64 ? 'ANEXO' : 'SEM FOTO'
       };
-
-      // Enviar para Google Sheet (no-cors para evitar bloqueio)
-      fetch(scriptURL, {
-        method: 'POST',
-        mode: 'no-cors',
-        body: JSON.stringify(dados),
-        headers: {'Content-Type': 'text/plain'}
-      })
-      .then(() => {
-        alert('Currículo salvo com sucesso! Em breve entraremos em contato.');
-        window.location.href = 'index.html';
-      })
-      .catch(() => {
-        // Fallback para WhatsApp se der erro
-        let mensagem = "🔥 *NOVO CURRÍCULO - ELEVAR TALENTOS*\n\n";
-        mensagem += `👤 *Nome:* ${dados.nome}\n`;
-        mensagem += `📧 *E-mail:* ${dados.email}\n`;
-        mensagem += `📱 *Telefone:* ${dados.telefone}\n`;
-        mensagem += `💼 *Último Cargo:* ${dados.ultimoCargo}\n`;
-        mensagem += `🏢 *Empresa:* ${dados.empresa}\n`;
-        mensagem += `🎯 *Área:* ${dados.area}`;
-        
-        window.open(`https://wa.me/5518996272190?text=${encodeURIComponent(mensagem)}`, '_blank');
-      });
+      
+      for (const [key, value] of Object.entries(campos)) {
+        const input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = key;
+        input.value = value || '';
+        form.appendChild(input);
+      }
+      
+      document.body.appendChild(form);
+      form.submit();
+      
+      // Limpar e redirecionar
+      setTimeout(() => {
+        document.body.removeChild(form);
+        document.body.removeChild(iframe);
+      }, 1000);
+      
+      alert('Currículo salvo com sucesso! Em breve entraremos em contato.');
+      window.location.href = 'index.html';
     }
   </script>
 </body>
