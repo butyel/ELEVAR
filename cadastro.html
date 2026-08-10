@@ -13,10 +13,14 @@
       --gold: #C9A84C;
       --gold-light: #E2C47A;
       --gold-dark: #8B6914;
-      --charcoal: #1A1A1A;
-      --charcoal-mid: #2D2D2D;
+      --charcoal: #0B0B0B;
+      --charcoal-mid: #151413;
+      --charcoal-soft: #1E1C19;
+      --surface: #101010;
       --white: #FFFFFF;
-      --offwhite: #F5F0E8;
+      --offwhite: #EDEAE3;
+      --muted: #9C978B;
+      --border: rgba(237,234,227,0.08);
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
@@ -25,6 +29,7 @@
       font-family: 'Montserrat', sans-serif;
       font-weight: 300;
       line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
     }
     .container {
       max-width: 700px;
@@ -55,12 +60,13 @@
     }
     .form-section {
       background: var(--charcoal-mid);
+      border: 1px solid var(--border);
       padding: 32px;
       margin-bottom: 24px;
     }
     .form-section h2 {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 22px;
+      font-size: 24px;
       font-weight: 400;
       color: var(--gold);
       margin-bottom: 24px;
@@ -80,8 +86,8 @@
     .form-group select,
     .form-group textarea {
       width: 100%;
-      background: var(--charcoal);
-      border: 1px solid rgba(201,168,76,0.2);
+      background: var(--surface);
+      border: 1px solid var(--border);
       padding: 14px 16px;
       font-size: 14px;
       color: var(--offwhite);
@@ -120,10 +126,16 @@
     }
     .file-upload input { display: none; }
     .file-icon {
-      font-size: 32px;
+      width: 44px;
+      height: 44px;
+      margin: 0 auto 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       color: var(--gold);
-      margin-bottom: 12px;
+      border: 1px solid rgba(201,168,76,0.3);
     }
+    .file-icon svg { width: 20px; height: 20px; }
     .file-text {
       font-size: 13px;
       color: #888;
@@ -132,7 +144,7 @@
     .submit-btn {
       display: block;
       width: 100%;
-      background: linear-gradient(135deg, var(--gold-dark), var(--gold), var(--gold-light));
+      background: var(--gold);
       color: var(--charcoal);
       font-size: 12px;
       font-weight: 700;
@@ -145,7 +157,8 @@
     }
     .submit-btn:hover {
       transform: translateY(-2px);
-      box-shadow: 0 10px 30px rgba(201,168,76,0.3);
+      background: var(--gold-light);
+      box-shadow: 0 10px 30px rgba(201,168,76,0.25);
     }
     .whatsapp-note {
       text-align: center;
@@ -180,7 +193,9 @@
           <label>Foto de Perfil (opcional)</label>
           <div class="file-upload" onclick="document.getElementById('foto').click()">
             <input type="file" id="foto" name="foto" accept="image/*" onchange="previewFoto(this)">
-            <div class="file-icon">📷</div>
+            <div class="file-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 16V4"/><path d="M6 10l6-6 6 6"/><path d="M4 20h16"/></svg>
+            </div>
             <div class="file-text" id="fotoText">Clique para selecionar uma foto</div>
           </div>
         </div>

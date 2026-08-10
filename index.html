@@ -3,635 +3,1161 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ELEVAR — Gestão & Performance Humana</title>
-  <meta name="description" content="Consultoria especializada em liderança, desenvolvimento de equipes e otimização de processos. Treinamentos B2B, coaching executivo e consultoria gerencial para empresas de alto desempenho.">
+
+  <title>ELEVAR — Gestão &amp; Performance Humana | Consultoria Empresarial</title>
+  <meta name="description" content="Consultoria empresarial em liderança, desenvolvimento humano e performance corporativa. Treinamentos B2B, coaching executivo e consultoria gerencial para empresas de alto desempenho.">
   <meta name="author" content="Jefferson Malaguti">
   <meta name="robots" content="index, follow">
-  <meta property="og:title" content="ELEVAR — Gestão & Performance Humana">
-  <meta property="og:description" content="Transformando potencial humano em performance corporativa de alto nível">
+  <meta name="theme-color" content="#0B0B0B">
+
+  <link rel="canonical" href="https://jefferson-malagutti.vercel.app/">
+
+  <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://elevar-malagutti.web.app">
-  <meta property="og:image" content="https://elevar-malagutti.web.app/og-image.jpg">
+  <meta property="og:site_name" content="ELEVAR — Gestão &amp; Performance Humana">
+  <meta property="og:title" content="ELEVAR — Gestão &amp; Performance Humana">
+  <meta property="og:description" content="Transformando potencial humano em performance corporativa de alto nível.">
+  <meta property="og:url" content="https://jefferson-malagutti.vercel.app/">
+  <meta property="og:image" content="https://jefferson-malagutti.vercel.app/IMAGENS/Logotipo%20ELEVAR%20-%20Gest%C3%A3o%20e%20performance%20humana_Prancheta%201%20c%C3%B3pia%2013.png">
+
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="theme-color" content="#C9A84C">
-  <link rel="canonical" href="https://elevar-malagutti.web.app">
+  <meta name="twitter:title" content="ELEVAR — Gestão &amp; Performance Humana">
+  <meta name="twitter:description" content="Consultoria em liderança, desenvolvimento humano e performance corporativa. Treinamentos B2B, coaching executivo e consultoria gerencial.">
+  <meta name="twitter:image" content="https://jefferson-malagutti.vercel.app/IMAGENS/Logotipo%20ELEVAR%20-%20Gest%C3%A3o%20e%20performance%20humana_Prancheta%201%20c%C3%B3pia%2013.png">
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="css/estilos.css">
+
+  <!-- Dados Estruturados -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://jefferson-malagutti.vercel.app/#organization",
+        "name": "ELEVAR — Gestão & Performance Humana",
+        "url": "https://jefferson-malagutti.vercel.app/",
+        "logo": "https://jefferson-malagutti.vercel.app/IMAGENS/Logotipo%20ELEVAR%20-%20Gest%C3%A3o%20e%20performance%20humana_Prancheta%201%20c%C3%B3pia%2013.png",
+        "founder": { "@id": "https://jefferson-malagutti.vercel.app/#person" },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+55-18-99627-2190",
+          "contactType": "sales",
+          "areaServed": "BR",
+          "availableLanguage": "pt-BR"
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://jefferson-malagutti.vercel.app/#person",
+        "name": "Jefferson Malaguti",
+        "jobTitle": "Fundador & CEO",
+        "worksFor": { "@id": "https://jefferson-malagutti.vercel.app/#organization" },
+        "description": "Especialista em coaching e desenvolvimento humano com sólida trajetória em aceleração de resultados corporativos."
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://jefferson-malagutti.vercel.app/#service",
+        "name": "ELEVAR — Consultoria Empresarial",
+        "url": "https://jefferson-malagutti.vercel.app/",
+        "provider": { "@id": "https://jefferson-malagutti.vercel.app/#organization" },
+        "telephone": "+55-18-99627-2190",
+        "areaServed": "BR",
+        "priceRange": "R$280 - R$7.800",
+        "serviceType": [
+          "Consultoria empresarial",
+          "Treinamento corporativo",
+          "Coaching executivo",
+          "Desenvolvimento de lideranças",
+          "Gestão de equipes"
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
-  <!-- Navegação por dots -->
-  <nav class="nav-dots" id="navDots" aria-label="Navegação dos slides"></nav>
 
-  <!-- Menu de atalhos -->
-  <header class="atalhos-menu" id="atalhosMenu">
-    <a href="#slide-1" class="atalhos-logo"><img src="IMAGENS/Logotipo ELEVAR - Gestão e performance humana_Prancheta 1 cópia 13.png" alt="ELEVAR" class="atalhos-logo-img"></a>
-    <nav class="atalhos-links" aria-label="Menu de atalhos">
-      <a href="#slide-2" class="atalhos-link">Propósito</a>
-      <a href="#slide-3" class="atalhos-link">Fundador</a>
-      <a href="#slide-4" class="atalhos-link">Pilares</a>
-      <a href="#slide-5" class="atalhos-link">Serviços</a>
-      <a href="#slide-7" class="atalhos-link">Depoimentos</a>
-      <a href="#slide-8" class="atalhos-link">Vendas</a>
-      <a href="#slide-10" class="atalhos-link">Currículos</a>
-      <a href="#slide-13" class="atalhos-link">Contato</a>
-    </nav>
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <a href="#inicio" class="brand" aria-label="ELEVAR — voltar ao início">
+        <span class="brand-mark" aria-hidden="true">E</span>
+        <span class="brand-text">
+          <span class="brand-name">ELEVAR</span>
+          <span class="brand-tag">Gestão &amp; Performance</span>
+        </span>
+      </a>
+
+      <nav class="header-nav" aria-label="Navegação principal">
+        <a href="#proposito">Propósito</a>
+        <a href="#pilares">Pilares</a>
+        <a href="#metodologia">Metodologia</a>
+        <a href="#solucoes">Soluções</a>
+        <a href="#depoimentos">Depoimentos</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#curriculos">Talentos</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#contato" class="btn btn--primary header-cta">Falar com Jefferson</a>
+        <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
   </header>
 
-  <!-- SLIDE 1: CAPA -->
-  <section class="slide" id="slide-1" data-label="Início">
-    <div class="noise"></div>
-    <div class="corner-ornament tl"></div>
-    <div class="corner-ornament tr"></div>
-    <div class="corner-ornament bl"></div>
-    <div class="corner-ornament br"></div>
-    <div class="logo-mark" style="animation: fadeUp 1.2s ease forwards;">
-      <img src="IMAGENS/Logotipo ELEVAR - Gestão e performance humana_Prancheta 1 cópia 13.png" alt="ELEVAR - Gestão & Performance Humana" class="logo-img">
+  <!-- ============ MENU MOBILE ============ -->
+  <nav class="mobile-menu" id="mobileMenu" aria-label="Menu móvel">
+    <div class="mobile-menu-nav">
+      <a href="#inicio"><small>01</small>Início</a>
+      <a href="#proposito"><small>02</small>Propósito</a>
+      <a href="#fundador"><small>03</small>Jefferson</a>
+      <a href="#pilares"><small>04</small>Pilares</a>
+      <a href="#metodologia"><small>05</small>Metodologia</a>
+      <a href="#solucoes"><small>06</small>Soluções</a>
+      <a href="#depoimentos"><small>07</small>Depoimentos</a>
+      <a href="#servicos"><small>08</small>Serviços</a>
+      <a href="#curriculos"><small>09</small>Talentos</a>
+      <a href="#contato"><small>10</small>Contato</a>
     </div>
-    <div class="gold-line"></div>
-    <p class="hero-tagline">Transformando potencial humano em<br>performance corporativa de alto nível</p>
-    <p class="hero-sub">Treinamentos · Consultoria · Desenvolvimento Executivo</p>
-  </section>
+    <div class="mobile-menu-foot">
+      <a href="https://wa.me/5518996272190?text=Ol%C3%A1,%20gostaria%20de%20saber%20mais%20sobre%20os%20treinamentos%20da%20ELEVAR" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Falar no WhatsApp</a>
+      <a href="#contato" class="anchor-link">Agendar reunião</a>
+    </div>
+  </nav>
 
-  <!-- SLIDE 2: PROPÓSITO -->
-  <section class="slide" id="slide-2" data-label="Propósito">
-    <div class="noise"></div>
-    <div class="corner-ornament tl"></div>
-    <div class="corner-ornament br"></div>
-    <div class="inner">
-      <div>
-        <p class="section-label reveal">Nosso Propósito</p>
-        <h2 class="section-title reveal">No cenário atual,<br>o diferencial é <em>humano</em></h2>
-        <div class="gold-line-left reveal"></div>
-        <p class="body-text reveal">Empresas não sofrem apenas por falta de técnica. Sofrem por <strong style="color:var(--offwhite)">lacunas de comportamento</strong> e processos ineficientes. A liderança despreparada custa mais do que qualquer despesa operacional.</p>
-        <div class="quote-block reveal">
-          <p>"A ELEVAR nasceu para ser a ponte entre o potencial humano e a performance corporativa de alto nível."</p>
+  <main id="conteudo">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="inicio" aria-label="Apresentação">
+      <div class="hero-grid-lines" aria-hidden="true"></div>
+      <div class="noise" aria-hidden="true"></div>
+      <div class="hero-watermark" aria-hidden="true">ELEVAR</div>
+
+      <div class="container">
+        <div class="hero-content">
+          <p class="hero-eyebrow" data-hero-fade>Gestão · Liderança · Performance</p>
+
+          <h1 class="hero-title">
+            <span class="row"><span>Transformando</span></span>
+            <span class="row"><span>potencial humano</span></span>
+            <span class="row"><span>em <em>performance corporativa</em></span></span>
+            <span class="row"><span>de alto nível.</span></span>
+          </h1>
+
+          <p class="hero-desc" data-hero-fade="1">
+            Consultoria especializada em gestão empresarial, treinamento corporativo e
+            consultoria executiva. Unimos inteligência comportamental à precisão estratégica
+            para transformar equipes e processos em vantagem competitiva real.
+          </p>
+
+          <div class="hero-actions" data-hero-fade="2">
+            <a href="#contato" class="btn btn--primary btn--magnetic">Falar com Jefferson
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg>
+            </a>
+            <a href="#metodologia" class="btn btn--ghost">Conheça a metodologia</a>
+          </div>
         </div>
-        <p class="body-text reveal">Combinamos a sensibilidade do comportamento humano à precisão da gestão estratégica para entregar resultados reais e mensuráveis em cada organização que atendemos.</p>
+
+        <div class="hero-meta" data-hero-fade="3">
+          <div class="hero-meta-item">
+            <div class="hero-meta-num"><em>+</em><span data-count="10">0</span></div>
+            <div class="hero-meta-lbl">Anos de Experiência</div>
+          </div>
+          <div class="hero-meta-item">
+            <div class="hero-meta-num">B2B</div>
+            <div class="hero-meta-lbl">Foco Corporativo</div>
+          </div>
+          <div class="hero-meta-item">
+            <div class="hero-meta-num"><span data-count="4">0</span><em>×</em></div>
+            <div class="hero-meta-lbl">Soluções Integradas</div>
+          </div>
+        </div>
       </div>
-      <div style="position:relative">
-        <div class="vertical-divider"></div>
-        <div style="padding-left: 60px;">
-          <p class="section-label reveal">Nossa Missão</p>
-          <h3 style="font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:300;color:var(--offwhite);line-height:1.4;margin-bottom:32px;" class="reveal">Integrar inteligência comportamental à gestão estratégica para maximizar o ROI de cada colaborador</h3>
-          <div class="stat-row reveal">
-            <div class="stat-item">
-              <div class="num">+10</div>
-              <div class="lbl">Anos de Experiência</div>
+
+      <div class="hero-scroll" aria-hidden="true">
+        <span>Scroll</span>
+        <i></i>
+      </div>
+    </section>
+
+    <!-- ============ PROPÓSITO ============ -->
+    <section class="section section-rule" id="proposito">
+      <div class="container">
+        <div class="purpose-grid">
+          <div>
+            <p class="eyebrow reveal reveal--up">Nosso Propósito</p>
+            <h2 class="h-display reveal reveal--up">
+              No cenário atual,<br>
+              o diferencial é <em>humano.</em>
+            </h2>
+
+            <p class="text-body reveal reveal--up" style="margin-top:36px;max-width:560px;">
+              Empresas não sofrem apenas por falta de técnica. Sofrem por
+              <strong>lacunas de comportamento</strong> e processos ineficientes.
+              A liderança despreparada custa mais do que qualquer despesa operacional.
+            </p>
+
+            <blockquote class="purpose-quote reveal reveal--up">
+              <p>“A ELEVAR nasceu para ser a ponte entre o potencial humano e a <em>performance corporativa</em> de alto nível.”</p>
+            </blockquote>
+
+            <p class="text-body reveal reveal--up" style="max-width:560px;">
+              Combinamos a sensibilidade do comportamento humano à precisão da gestão
+              estratégica para entregar resultados reais e mensuráveis em cada organização
+              que atendemos.
+            </p>
+          </div>
+
+          <aside class="purpose-aside">
+            <div class="purpose-mission reveal reveal--up">
+              <p class="eyebrow" style="margin-bottom:0;">Nossa Missão</p>
+              <h3>Integrar inteligência comportamental à gestão estratégica para maximizar o ROI de cada colaborador.</h3>
             </div>
-            <div class="stat-item">
-              <div class="num">B2B</div>
-              <div class="lbl">Foco Corporativo</div>
+
+            <ul class="act-model reveal reveal--up" aria-label="Modelo de atuação">
+              <li><strong>01</strong><span>Diagnóstico profundo da organização</span></li>
+              <li><strong>02</strong><span>Treinamento customizado por área</span></li>
+              <li><strong>03</strong><span>Implementação com acompanhamento</span></li>
+              <li><strong>04</strong><span>Mensuração de resultados (KPIs)</span></li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MÉTRICAS ============ -->
+    <section class="metrics-band section-rule" id="metricas" aria-label="Números da ELEVAR">
+      <div class="container">
+        <div class="metrics-grid">
+          <div class="metric reveal reveal--fade">
+            <div class="metric-num"><span data-count="10">0</span>+</div>
+            <div class="metric-lbl">Anos de Experiência</div>
+          </div>
+          <div class="metric reveal reveal--fade" data-delay="120">
+            <div class="metric-num">B2B</div>
+            <div class="metric-lbl">Foco Corporativo</div>
+          </div>
+          <div class="metric reveal reveal--fade" data-delay="240">
+            <div class="metric-num"><span data-count="4">0</span>×</div>
+            <div class="metric-lbl">Soluções Integradas</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FUNDADOR ============ -->
+    <section class="section section-rule" id="fundador">
+      <div class="container">
+        <div class="founder-grid">
+          <div class="founder-media reveal reveal--fade">
+            <div class="founder-frame" aria-hidden="true"></div>
+            <div class="founder-img-wrap img-reveal">
+              <img src="imagem modelo.jpg" alt="Jefferson Malaguti, fundador e CEO da ELEVAR — Gestão e Performance Humana" loading="lazy" decoding="async" data-parallax>
             </div>
-            <div class="stat-item">
-              <div class="num">4×</div>
-              <div class="lbl">Soluções Integradas</div>
+            <div class="founder-id">
+              <div class="fn">Jefferson Malaguti</div>
+              <div class="ft">Fundador &amp; CEO</div>
+            </div>
+          </div>
+
+          <div>
+            <p class="eyebrow reveal reveal--up">Quem Somos</p>
+            <h2 class="h-display reveal reveal--up">Consultoria especializada.<br>Missão <em>clara.</em></h2>
+
+            <p class="text-body reveal reveal--up" style="margin-top:32px;max-width:560px;">
+              Somos uma consultoria que une <strong>inteligência comportamental</strong> à
+              precisão estratégica. Não entregamos apenas treinamentos — construímos culturas
+              de alta performance duradouras.
+            </p>
+
+            <div class="founder-badges reveal reveal--up">
+              <span class="tag-pill">Consultor Executivo</span>
+              <span class="tag-pill">Coaching &amp; Desenvolvimento</span>
+            </div>
+
+            <p class="text-body reveal reveal--up" style="max-width:560px;">
+              Especialista em coaching e desenvolvimento humano com sólida trajetória em
+              aceleração de resultados corporativos. Sua metodologia alia ciência
+              comportamental a estratégia de negócios.
+            </p>
+
+            <div class="founder-stats reveal reveal--up">
+              <div class="founder-stat">
+                <div class="fs-num">C-Level</div>
+                <div class="fs-lbl">Clientes</div>
+              </div>
+              <div class="founder-stat">
+                <div class="fs-num">MIP</div>
+                <div class="fs-lbl">Metodologia</div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- SLIDE 3: FUNDADOR -->
-  <section class="slide" id="slide-3" data-label="Fundador">
-    <div class="noise"></div>
-    <div class="corner-ornament tl"></div>
-    <div class="corner-ornament br"></div>
-    <div class="inner">
-      <div class="founder-card reveal">
-        <img src="imagem modelo.jpg" alt="Jefferson Malaguti - Fundador e CEO da ELEVAR" class="founder-avatar" loading="lazy" decoding="async">
-        <h3 class="founder-name">Jefferson Malaguti</h3>
-        <p class="founder-title">Fundador & CEO</p>
-        <p class="founder-role">Especialista em coaching e desenvolvimento humano com sólida trajetória em aceleração de resultados corporativos. Sua metodologia alia ciência comportamental a estratégia de negócios.</p>
-        <span class="founder-badge">Consultor Executivo</span>
-      </div>
-      <div>
-        <p class="section-label reveal">Quem Somos</p>
-        <h2 class="section-title reveal">Consultoria especializada.<br>Missão <em>clara</em>.</h2>
-        <div class="gold-line-left reveal"></div>
-        <p class="body-text reveal" style="margin-bottom:32px;">Somos uma consultoria que une <strong style="color:var(--offwhite)">inteligência comportamental</strong> à precisão estratégica. Não entregamos apenas treinamentos — construímos culturas de alta performance duradouras.</p>
+    <!-- ============ PILARES ============ -->
+    <section class="section section-rule" id="pilares">
+      <div class="container">
+        <p class="eyebrow reveal reveal--up">Pilares de Atuação</p>
+        <h2 class="h-display reveal reveal--up">Como elevamos <em>sua organização</em></h2>
+
         <div class="pillars-list">
-          <div class="pillar-item reveal">
+          <article class="pillar-row reveal reveal--up">
             <span class="pillar-num">01</span>
-            <div class="pillar-text">
-              <h4>Desenvolvimento de Lideranças</h4>
-              <p>Formação de gestores capazes de inspirar, engajar e alcançar metas com consistência.</p>
+            <div class="pillar-main">
+              <h3>Desenvolvimento de Lideranças</h3>
             </div>
-          </div>
-          <div class="pillar-item reveal">
+            <p class="pillar-desc">Formação de gestores capazes de inspirar, engajar e alcançar metas com consistência.</p>
+            <span class="pillar-arrow" aria-hidden="true"></span>
+          </article>
+
+          <article class="pillar-row reveal reveal--up" data-delay="100">
             <span class="pillar-num">02</span>
-            <div class="pillar-text">
-              <h4>Otimização de Fluxos Gerenciais</h4>
-              <p>Mapeamento e reestruturação de processos para máxima eficiência operacional.</p>
+            <div class="pillar-main">
+              <h3>Otimização de Fluxos Gerenciais</h3>
             </div>
-          </div>
-          <div class="pillar-item reveal">
+            <p class="pillar-desc">Mapeamento e reestruturação de processos para máxima eficiência operacional.</p>
+            <span class="pillar-arrow" aria-hidden="true"></span>
+          </article>
+
+          <article class="pillar-row reveal reveal--up" data-delay="200">
             <span class="pillar-num">03</span>
-            <div class="pillar-text">
-              <h4>ROI de Pessoas</h4>
-              <p>Cada intervenção é desenhada para gerar retorno mensurável sobre o capital humano.</p>
+            <div class="pillar-main">
+              <h3>ROI de Pessoas</h3>
             </div>
+            <p class="pillar-desc">Cada intervenção é desenhada para gerar retorno mensurável sobre o capital humano.</p>
+            <span class="pillar-arrow" aria-hidden="true"></span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ METODOLOGIA ============ -->
+    <section class="section section-rule methodology" id="metodologia">
+      <div class="container">
+        <div class="method-grid">
+          <div class="method-sticky">
+            <p class="eyebrow reveal reveal--up">Metodologia</p>
+            <h2 class="h-display reveal reveal--up">Três pilares para<br>transformação <em>real</em></h2>
+            <p class="text-body reveal reveal--up" style="margin-top:28px;max-width:440px;">
+              Nossa metodologia sustenta-se em três eixos fundamentais que, quando integrados,
+              produzem mudanças organizacionais sustentáveis e resultados financeiros concretos.
+            </p>
+            <a href="#servicos" class="anchor-link reveal reveal--up" style="margin-top:36px;">
+              Ver soluções<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg>
+            </a>
+          </div>
+
+          <div class="method-list">
+            <article class="method-item reveal reveal--up">
+              <div class="method-index">01</div>
+              <h3>Liderança &amp; Comportamento</h3>
+              <p>Treinamentos customizados para transformar grupos em equipes de alta performance através de palestras e workshops imersivos de alto impacto.</p>
+            </article>
+
+            <article class="method-item reveal reveal--up" data-delay="100">
+              <div class="method-index">02</div>
+              <h3>Eficiência de Processos</h3>
+              <p>Diagnóstico e estruturação de processos gerenciais para eliminar gargalos, aumentar a previsibilidade de resultados e reduzir retrabalho.</p>
+            </article>
+
+            <article class="method-item reveal reveal--up" data-delay="200">
+              <div class="method-index">03</div>
+              <h3>Cultura de Excelência</h3>
+              <p>Alinhamento estratégico entre visão executiva e execução operacional para sustentabilidade dos resultados no longo prazo.</p>
+            </article>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- SLIDE 4: PILARES -->
-  <section class="slide" id="slide-4" data-label="Pilares">
-    <div class="inner">
-      <div>
-        <p class="section-label reveal">Metodologia</p>
-        <h2 class="section-title reveal">Três pilares para<br>transformação <em style="color:var(--gold-dark)">real</em></h2>
-        <div class="gold-line-left reveal" style="background:linear-gradient(90deg,var(--gold-dark),transparent);"></div>
-        <p class="body-text reveal" style="color:#666;max-width:600px;">Nossa metodologia sustenta-se em três eixos fundamentais que, quando integrados, produzem mudanças organizacionais sustentáveis e resultados financeiros concretos.</p>
+    <!-- ============ SOLUÇÕES ============ -->
+    <section class="section section-rule" id="solucoes">
+      <div class="container">
+        <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap;">
+          <div>
+            <p class="eyebrow reveal reveal--up">Soluções Disponíveis</p>
+            <h2 class="h-display reveal reveal--up">Portfólio de <em>soluções</em></h2>
+          </div>
+          <a href="#servicos" class="anchor-link reveal reveal--up">Ver serviços e preços<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></a>
+        </div>
+
+        <div class="solutions-list">
+          <article class="solution-row reveal reveal--up">
+            <span class="solution-idx">01</span>
+            <div>
+              <h3 class="solution-name">Keynote Speaking</h3>
+              <p class="solution-cat">Palestras de Impacto</p>
+            </div>
+            <p class="solution-desc">Palestras magnéticas sobre liderança, resiliência e inteligência emocional para mobilizar audiências e catalisar mudanças culturais.</p>
+            <p class="solution-target">Eventos corporativos &amp; convenções</p>
+            <span class="solution-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></span>
+          </article>
+
+          <article class="solution-row reveal reveal--up" data-delay="80">
+            <span class="solution-idx">02</span>
+            <div>
+              <h3 class="solution-name">High Performance Training</h3>
+              <p class="solution-cat">Workshops Imersivos</p>
+            </div>
+            <p class="solution-desc">Workshops focados em competências comportamentais (soft skills) com metodologia andragógica aplicada à realidade corporativa.</p>
+            <p class="solution-target">Gestores &amp; equipes de vendas</p>
+            <span class="solution-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></span>
+          </article>
+
+          <article class="solution-row reveal reveal--up" data-delay="160">
+            <span class="solution-idx">03</span>
+            <div>
+              <h3 class="solution-name">Consultoria Gerencial</h3>
+              <p class="solution-cat">Processos &amp; KPIs</p>
+            </div>
+            <p class="solution-desc">Reestruturação de processos internos e implantação de indicadores estratégicos com acompanhamento para garantir a sustentabilidade.</p>
+            <p class="solution-target">Diretoria &amp; gerência média</p>
+            <span class="solution-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></span>
+          </article>
+
+          <article class="solution-row reveal reveal--up" data-delay="240">
+            <span class="solution-idx">04</span>
+            <div>
+              <h3 class="solution-name">Executive Mentoring</h3>
+              <p class="solution-cat">1:1 de Alto Nível</p>
+            </div>
+            <p class="solution-desc">Acompanhamento individual de alto impacto para sucessores e executivos de alto escalão acelerarem sua evolução estratégica.</p>
+            <p class="solution-target">C-Level &amp; empreendedores</p>
+            <span class="solution-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></span>
+          </article>
+        </div>
       </div>
-      <div class="pillars-grid reveal">
-        <div class="pillar-card">
-          <div class="pillar-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          </div>
-          <h3>Liderança & Comportamento</h3>
-          <p>Treinamentos customizados para transformar grupos em equipes de alta performance através de palestras e workshops imersivos de alto impacto.</p>
-        </div>
-        <div class="pillar-card">
-          <div class="pillar-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-          </div>
-          <h3>Eficiência de Processos</h3>
-          <p>Diagnóstico e estruturação de processos gerenciais para eliminar gargalos, aumentar a previsibilidade de resultados e reduzir retrabalho.</p>
-        </div>
-        <div class="pillar-card">
-          <div class="pillar-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          </div>
-          <h3>Cultura de Excelência</h3>
-          <p>Alinhamento estratégico entre visão executiva e execução operacional para sustentabilidade dos resultados no longo prazo.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- SLIDE 5: PORTFÓLIO -->
-  <section class="slide" id="slide-5" data-label="Portfólio">
-    <div class="noise"></div>
-    <div class="corner-ornament tl"></div>
-    <div class="corner-ornament br"></div>
-    <div class="inner">
-      <p class="section-label reveal">Soluções Disponíveis</p>
-      <h2 class="section-title reveal">Portfólio de <em>Soluções</em></h2>
-      <div class="gold-line-left reveal"></div>
-      <table class="portfolio-table reveal">
-        <thead>
-          <tr>
-            <th>Solução</th>
-            <th>Descrição</th>
-            <th>Público-Alvo</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><span class="sol-name">Keynote Speaking</span><span class="sol-tag">Palestras de Impacto</span></td>
-            <td><p class="sol-desc">Palestras magnéticas sobre liderança, resiliência e inteligência emocional para mobilizar audiências e catalisar mudanças culturais.</p></td>
-            <td><span class="sol-target">Eventos Corporativos & Convenções</span></td>
-          </tr>
-          <tr>
-            <td><span class="sol-name">High Performance Training</span><span class="sol-tag">Workshops Imersivos</span></td>
-            <td><p class="sol-desc">Workshops focados em competências comportamentais (Soft Skills) com metodologia andragógica aplicada à realidade corporativa.</p></td>
-            <td><span class="sol-target">Gestores & Equipes de Vendas</span></td>
-          </tr>
-          <tr>
-            <td><span class="sol-name">Consultoria Gerencial</span><span class="sol-tag">Processos & KPIs</span></td>
-            <td><p class="sol-desc">Reestruturação de processos internos e implantação de indicadores estratégicos com acompanhamento para garantir a sustentabilidade.</p></td>
-            <td><span class="sol-target">Diretoria & Gerência Média</span></td>
-          </tr>
-          <tr>
-            <td><span class="sol-name">Executive Mentoring</span><span class="sol-tag">1:1 de Alto Nível</span></td>
-            <td><p class="sol-desc">Acompanhamento individual de alto impacto para sucessores e executivos de alto escalão acelerarem sua evolução estratégica.</p></td>
-            <td><span class="sol-target">C-Level & Empreendedores</span></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
+    <!-- ============ DIFERENCIAIS ============ -->
+    <section class="section section-rule" id="diferenciais">
+      <div class="container">
+        <div class="diff-head">
+          <p class="eyebrow reveal reveal--up">Por que Elevar?</p>
+          <h2 class="h-display reveal reveal--up">Nossos <em>diferenciais</em></h2>
+        </div>
 
-  <!-- SLIDE 6: DIFERENCIAIS -->
-  <section class="slide" id="slide-6" data-label="Diferenciais">
-    <div class="noise"></div>
-    <div class="corner-ornament tl"></div>
-    <div class="corner-ornament br"></div>
-    <div class="inner">
-      <div>
-        <p class="section-label reveal">Por que Elevar?</p>
-        <h2 class="section-title reveal">Nossos<br><em>Diferenciais</em></h2>
-        <div class="gold-line-left reveal"></div>
         <div class="diff-grid">
-          <div class="diff-item reveal">
-            <span class="diff-num">→</span>
-            <div class="diff-content">
-              <h4>Andragogia Aplicada</h4>
-              <p>Ensino para adultos integrado à prática real do dia a dia corporativo. Aprendizagem que gera mudança imediata de comportamento.</p>
+          <div class="diff-cell reveal reveal--up">
+            <span class="diff-num">01</span>
+            <h3>Andragogia Aplicada</h3>
+            <p>Ensino para adultos integrado à prática real do dia a dia corporativo. Aprendizagem que gera mudança imediata de comportamento.</p>
+          </div>
+
+          <div class="diff-cell diff-cell--feature reveal reveal--up" data-delay="100">
+            <span class="diff-num">Foco</span>
+            <h3>ROI Mensurável</h3>
+            <p>Intervenções voltadas para a melhoria do clima organizacional e resultados financeiros concretos. Não é custo — é investimento.</p>
+          </div>
+
+          <div class="diff-cell reveal reveal--up">
+            <span class="diff-num">02</span>
+            <h3>Personalização Total</h3>
+            <p>Cada treinamento é desenhado após diagnóstico profundo da cultura, desafios e objetivos específicos do cliente.</p>
+          </div>
+
+          <div class="diff-cell reveal reveal--up">
+            <span class="diff-num">03</span>
+            <h3>Sustentabilidade de Resultados</h3>
+            <p>Acompanhamento pós-treinamento para garantir que as mudanças se consolidem na cultura da organização.</p>
+          </div>
+        </div>
+
+        <div class="commitment reveal reveal--up">
+          <h3>Nosso Compromisso</h3>
+          <p>Cada projeto tem início com um diagnóstico honesto e termina com resultados documentados. Nossa reputação é construída em cima de transformações reais, não de promessas vazias.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FRASE DE IMPACTO ============ -->
+    <section class="impact" id="impacto" aria-label="Frase de impacto">
+      <div class="noise" aria-hidden="true"></div>
+      <div class="container">
+        <p class="impact-text reveal reveal--up">
+          Não entregamos apenas treinamentos;<br>
+          entregamos a evolução da sua <em>cultura organizacional</em>.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ DEPOIMENTOS ============ -->
+    <section class="section section-rule testimonials" id="depoimentos">
+      <div class="container">
+        <p class="eyebrow eyebrow--center reveal reveal--up">O que dizem nossos clientes</p>
+        <h2 class="h-display reveal reveal--up" style="text-align:center;">Depoimentos</h2>
+
+        <div class="testimonial-stage reveal reveal--fade" aria-live="polite" id="testimonialStage">
+          <figure class="testimonial-slide is-active" data-slide>
+            <span class="testimonial-quote-mark" aria-hidden="true">“</span>
+            <blockquote class="testimonial-text">Depois do treinamento de liderança, nossa equipe de gestores mudou completamente a forma de conduzir reuniões e dar feedbacks. O resultado? Crescimento de 47% em engajamento e redução de 60% em turnover.</blockquote>
+            <figcaption class="testimonial-author">
+              <span class="testimonial-name">Roberto Santana</span>
+              <span class="testimonial-role">Diretor Geral · Grupo Vital</span>
+            </figcaption>
+          </figure>
+
+          <figure class="testimonial-slide" data-slide>
+            <span class="testimonial-quote-mark" aria-hidden="true">“</span>
+            <blockquote class="testimonial-text">A consultoria transformou nossa operação. Mapeamos gargalos que nem sabíamos existir e reconstruímos processos que triplicaram nossa produtividade em 6 meses.</blockquote>
+            <figcaption class="testimonial-author">
+              <span class="testimonial-name">Mariana Lima</span>
+              <span class="testimonial-role">CEO · Innovare Tech</span>
+            </figcaption>
+          </figure>
+
+          <figure class="testimonial-slide" data-slide>
+            <span class="testimonial-quote-mark" aria-hidden="true">“</span>
+            <blockquote class="testimonial-text">O coaching executivo foi divisor de águas na minha carreira. Em 3 meses, consegui estruturar minha liderança e bater metas que pareciam impossíveis. Investimento que se pagou várias vezes.</blockquote>
+            <figcaption class="testimonial-author">
+              <span class="testimonial-name">André Pereira</span>
+              <span class="testimonial-role">Diretor Comercial · Stark Industries</span>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="testimonial-nav reveal reveal--fade">
+          <span class="testimonial-count"><strong id="testimonialCurrent">01</strong> / <span id="testimonialTotal">03</span></span>
+          <span class="testimonial-dots" id="testimonialDots" role="tablist" aria-label="Selecionar depoimento"></span>
+          <span class="testimonial-arrows">
+            <button class="t-arrow prev" id="testimonialPrev" aria-label="Depoimento anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M19 12H5"/><path d="M11 6l-6 6 6 6"/></svg></button>
+            <button class="t-arrow next" id="testimonialNext" aria-label="Próximo depoimento"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></button>
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SERVIÇOS ============ -->
+    <section class="section section-rule" id="servicos">
+      <div class="container">
+        <div class="services-head">
+          <div>
+            <p class="eyebrow reveal reveal--up">Serviços &amp; Treinamentos</p>
+            <h2 class="h-display reveal reveal--up">Soluções sob <em>medida</em></h2>
+          </div>
+          <p class="services-note reveal reveal--up">* Valores para turmas de até 25 participantes. Projetos maiores sob consulta.</p>
+        </div>
+
+        <div class="tabs" id="serviceTabs" role="tablist" aria-label="Categorias de serviços">
+          <button class="tab is-active" role="tab" id="tab-vendas" aria-selected="true" aria-controls="panel-vendas" data-tab="vendas">Vendas</button>
+          <button class="tab" role="tab" id="tab-treinamentos" aria-selected="false" aria-controls="panel-treinamentos" data-tab="treinamentos" tabindex="-1">Treinamentos</button>
+          <button class="tab" role="tab" id="tab-individual" aria-selected="false" aria-controls="panel-individual" data-tab="individual" tabindex="-1">Individual</button>
+          <button class="tab" role="tab" id="tab-consultoria" aria-selected="false" aria-controls="panel-consultoria" data-tab="consultoria" tabindex="-1">Consultoria</button>
+        </div>
+
+        <div class="tab-panels">
+
+          <!-- VENDAS -->
+          <div class="tab-panel is-active" role="tabpanel" id="panel-vendas" aria-labelledby="tab-vendas">
+            <div class="service-grid">
+
+              <article class="service-card reveal reveal--up">
+                <span class="service-tag">16 Horas</span>
+                <h3>Prospecção de Alta Performance</h3>
+                <p class="service-meta">2 Dias · Turma até 25 pessoas</p>
+                <p class="desc">Metodologia completa de prospecção ativa para transformar sua equipe comercial em uma máquina de gerar leads qualificados e converter oportunidades.</p>
+                <ul class="service-modules">
+                  <li>Análise comportamental do comprador</li>
+                  <li>Técnicas de abordagem e qualificação BANT</li>
+                  <li>Prospecção multicanal (LinkedIn, e-mail, telefone)</li>
+                  <li>Construção de autoridade e rapport</li>
+                  <li>Fechamento consultivo</li>
+                </ul>
+                <div class="service-price-block">
+                  <div class="service-price"><span class="cur">R$</span><span class="amt">7.800</span><span class="per">/turma</span></div>
+                  <span class="service-price-sub">R$ 487,00 / hora</span>
+                </div>
+                <a href="https://wa.me/5518996272190?text=Ol%C3%A1,%20tenho%20interesse%20no%20treinamento%20de%20Prospec%C3%A7%C3%A3o%20de%20Alta%20Performance" class="btn btn--outline-accent" target="_blank" rel="noopener noreferrer">Solicitar proposta</a>
+              </article>
+
+              <article class="service-card reveal reveal--up" data-delay="80">
+                <span class="service-tag">8 Horas</span>
+                <h3>Negociação Avançada</h3>
+                <p class="service-meta">1 Dia Completo · Turma até 25 pessoas</p>
+                <p class="desc">Técnicas de negociação para fechar deals de alto valor. Aprenda a ler sinais, estruturar propostas irrecusáveis e eliminar objeções.</p>
+                <ul class="service-modules">
+                  <li>Psicologia da decisão de compra</li>
+                  <li>Técnicas de anchoring e escassez</li>
+                  <li>Gestão de objeções avançada</li>
+                  <li>Fechamento alternativo e gancho</li>
+                  <li>Negociação B2B de alto ticket</li>
+                </ul>
+                <div class="service-price-block">
+                  <div class="service-price"><span class="cur">R$</span><span class="amt">5.200</span><span class="per">/turma</span></div>
+                  <span class="service-price-sub">R$ 650,00 / hora</span>
+                </div>
+                <a href="https://wa.me/5518996272190?text=Ol%C3%A1,%20tenho%20interesse%20no%20treinamento%20de%20Negocia%C3%A7%C3%A3o%20Avan%C3%A7ada" class="btn btn--outline-accent" target="_blank" rel="noopener noreferrer">Solicitar proposta</a>
+              </article>
+
             </div>
           </div>
-          <div class="diff-item reveal">
-            <span class="diff-num">→</span>
-            <div class="diff-content">
-              <h4>Personalização Total</h4>
-              <p>Cada treinamento é desenhado após diagnóstico profundo da cultura, desafios e objetivos específicos do cliente.</p>
+
+          <!-- TREINAMENTOS -->
+          <div class="tab-panel" role="tabpanel" id="panel-treinamentos" aria-labelledby="tab-treinamentos">
+            <div class="service-grid">
+
+              <article class="service-card">
+                <span class="service-tag">8 Horas</span>
+                <h3>Liderança em Alta Performance</h3>
+                <p class="service-meta">1 Dia Completo · Turma até 25 pessoas</p>
+                <p class="desc">Desenvolvimento acelerado de competências de liderança para gestores que precisam engajar equipes e alcançar resultados com consistência.</p>
+                <div class="service-price-block">
+                  <div class="service-price"><span class="cur">R$</span><span class="amt">5.200</span><span class="per">/turma</span></div>
+                  <span class="service-price-sub">R$ 650,00 / hora · Melhor custo-benefício</span>
+                </div>
+                <a href="https://wa.me/5518996272190?text=Ol%C3%A1,%20tenho%20interesse%20no%20treinamento%20de%20Lideran%C3%A7a%20em%20Alta%20Performance" class="btn btn--outline-accent" target="_blank" rel="noopener noreferrer">Solicitar proposta</a>
+              </article>
+
+              <article class="service-card">
+                <span class="service-tag">8 Horas</span>
+                <h3>Vendedor Campeão</h3>
+                <p class="service-meta">1 Dia Completo · Turma até 25 pessoas</p>
+                <p class="desc">Metodologia intensiva para transformar equipes comerciais em máquinas de vendas através de técnicas comportamentais e de persuasão ética.</p>
+                <div class="service-price-block">
+                  <div class="service-price"><span class="cur">R$</span><span class="amt">4.400</span><span class="per">/turma</span></div>
+                  <span class="service-price-sub">R$ 550,00 / hora</span>
+                </div>
+                <a href="https://wa.me/5518996272190?text=Ol%C3%A1,%20tenho%20interesse%20no%20treinamento%20Vendedor%20Campe%C3%A3o" class="btn btn--outline-accent" target="_blank" rel="noopener noreferrer">Solicitar proposta</a>
+              </article>
+
+              <article class="service-card">
+                <span class="service-tag">4 Horas</span>
+                <h3>Gestão Emocional Aplicada</h3>
+                <p class="service-meta">Meio Período · Turma até 25 pessoas</p>
+                <p class="desc">Ferramentas práticas de regulação emocional para líderes e colaboradores manterem alta performance em ambientes de pressão e incerteza.</p>
+                <div class="service-price-block">
+                  <div class="service-price"><span class="cur">R$</span><span class="amt">3.400</span><span class="per">/turma</span></div>
+                  <span class="service-price-sub">R$ 425,00 / hora</span>
+                </div>
+                <a href="https://wa.me/5518996272190?text=Ol%C3%A1,%20tenho%20interesse%20no%20treinamento%20de%20Gest%C3%A3o%20Emocional%20Aplicada" class="btn btn--outline-accent" target="_blank" rel="noopener noreferrer">Solicitar proposta</a>
+              </article>
+
+              <article class="service-card">
+                <span class="service-tag">4 Horas</span>
+                <h3>Atendimento Humanizado</h3>
+                <p class="service-meta">Meio Período · Turma até 25 pessoas</p>
+                <p class="desc">Capacitação para equipes de front-end criarem experiências memoráveis ao cliente, elevando NPS e fidelização com empatia estratégica.</p>
+                <div class="service-price-block">
+                  <div class="service-price"><span class="cur">R$</span><span class="amt">3.400</span><span class="per">/turma</span></div>
+                  <span class="service-price-sub">R$ 425,00 / hora</span>
+                </div>
+                <a href="https://wa.me/5518996272190?text=Ol%C3%A1,%20tenho%20interesse%20no%20treinamento%20de%20Atendimento%20Humanizado" class="btn btn--outline-accent" target="_blank" rel="noopener noreferrer">Solicitar proposta</a>
+              </article>
+
             </div>
           </div>
-          <div class="diff-item reveal">
-            <span class="diff-num">→</span>
-            <div class="diff-content">
-              <h4>Foco em ROI Mensurável</h4>
-              <p>Intervenções voltadas para melhoria do clima organizacional e resultados financeiros concretos. Não é custo — é investimento.</p>
+
+          <!-- INDIVIDUAL -->
+          <div class="tab-panel" role="tabpanel" id="panel-individual" aria-labelledby="tab-individual">
+            <div class="service-grid">
+
+              <article class="service-card">
+                <span class="service-tag">10 Sessões</span>
+                <h3>Coaching Executivo</h3>
+                <p class="service-meta">Pacote · Para Gestores</p>
+                <p class="desc">Foco em KPIs e metas estratégicas relacionais. Acompanhamento de alta intensidade para resultados rápidos.</p>
+                <div class="service-price-block">
+                  <div class="service-price"><span class="cur">R$</span><span class="amt">4.997</span><span class="per">pacote</span></div>
+                </div>
+                <a href="https://wa.me/5518996272190?text=Ol%C3%A1,%20tenho%20interesse%20no%20Coaching%20Executivo" class="btn btn--outline-accent" target="_blank" rel="noopener noreferrer">Agendar conversa</a>
+              </article>
+
+              <article class="service-card">
+                <span class="service-tag">Sessão Avulsa</span>
+                <h3>Processo Terapêutico</h3>
+                <p class="service-meta">Para Colaboradores</p>
+                <p class="desc">Suporte individual para equipes. Saúde mental como vantagem competitiva organizacional.</p>
+                <div class="service-price-block">
+                  <div class="service-price"><span class="cur">R$</span><span class="amt">280</span><span class="per">sessão</span></div>
+                </div>
+                <a href="https://wa.me/5518996272190?text=Ol%C3%A1,%20tenho%20interesse%20no%20Processo%20Terap%C3%AAutico" class="btn btn--outline-accent" target="_blank" rel="noopener noreferrer">Agendar conversa</a>
+              </article>
+
+              <article class="service-card">
+                <span class="service-tag">4h/Semana</span>
+                <h3>Plantão Elevar</h3>
+                <p class="service-meta">Mensal · Suporte Contínuo</p>
+                <p class="desc">Disponibilidade estratégica para resolver desafios de gestão em tempo real.</p>
+                <div class="service-price-block">
+                  <div class="service-price"><span class="cur">R$</span><span class="amt">4.500</span><span class="per">mês</span></div>
+                </div>
+                <a href="https://wa.me/5518996272190?text=Ol%C3%A1,%20tenho%20interesse%20no%20Plant%C3%A3o%20Elevar" class="btn btn--outline-accent" target="_blank" rel="noopener noreferrer">Agendar conversa</a>
+              </article>
+
+              <article class="service-card">
+                <span class="service-tag">10 Sessões</span>
+                <h3>Processo Gerencial</h3>
+                <p class="service-meta">Pacote · Para Líderes</p>
+                <p class="desc">Desenvolvimento profissional com suporte técnico para líderes em transição ou expansão de responsabilidades.</p>
+                <div class="service-price-block">
+                  <div class="service-price"><span class="cur">R$</span><span class="amt">4.997</span><span class="per">pacote</span></div>
+                </div>
+                <a href="https://wa.me/5518996272190?text=Ol%C3%A1,%20tenho%20interesse%20no%20Processo%20Gerencial" class="btn btn--outline-accent" target="_blank" rel="noopener noreferrer">Agendar conversa</a>
+              </article>
+
             </div>
           </div>
-          <div class="diff-item reveal">
-            <span class="diff-num">→</span>
-            <div class="diff-content">
-              <h4>Sustentabilidade de Resultados</h4>
-              <p>Acompanhamento pós-treinamento para garantir que as mudanças se consolidem na cultura da organização.</p>
+
+          <!-- CONSULTORIA -->
+          <div class="tab-panel" role="tabpanel" id="panel-consultoria" aria-labelledby="tab-consultoria">
+            <div class="process-intro">
+              <p class="eyebrow eyebrow--center">Projetos Estratégicos</p>
+              <h2 class="h-display">Consultoria &amp; <em>processos</em></h2>
+              <p class="text-body" style="margin-top:20px;">Projetos focados na estrutura e eficiência operacional da sua organização. Metodologia em três etapas sequenciais para garantir resultados sustentáveis.</p>
+            </div>
+
+            <div class="process-steps">
+              <div class="process-step">
+                <span class="process-num">01</span>
+                <h3>Diagnóstico Inicial</h3>
+                <p>Análise profunda dos processos atuais, mapeamento de gargalos e identificação de oportunidades de crescimento na operação.</p>
+              </div>
+              <div class="process-step">
+                <span class="process-num">02</span>
+                <h3>Reestruturação</h3>
+                <p>Desenho de novos fluxos operacionais, implantação de indicadores estratégicos (KPIs) e alinhamento das equipes envolvidas.</p>
+              </div>
+              <div class="process-step">
+                <span class="process-num">03</span>
+                <h3>Acompanhamento</h3>
+                <p>Suporte consultivo durante a fase de execução para garantir a sustentabilidade dos resultados e a consolidação da nova cultura.</p>
+              </div>
+            </div>
+
+            <div style="text-align:center;margin-top:64px;">
+              <a href="https://wa.me/5518996272190?text=Ol%C3%A1,%20tenho%20interesse%20em%20um%20projeto%20de%20Consultoria%20Gerencial" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Solicitar diagnóstico</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TALENTOS ============ -->
+    <section class="section section-rule" id="curriculos">
+      <div class="container">
+        <p class="eyebrow eyebrow--center reveal reveal--up">Banco de Talentos</p>
+        <h2 class="h-display reveal reveal--up" style="text-align:center;">Currículos <em>disponíveis</em></h2>
+        <p class="text-body reveal reveal--up" style="text-align:center;max-width:600px;margin:24px auto 0;">
+          Profissionais selecionados e preparados para alta performance. Candidate-se ou contrate talent.
+        </p>
+
+        <div class="cv-grid">
+          <a href="perfis/ana-maria.html" class="cv-card reveal reveal--up">
+            <div class="cv-top">
+              <span class="cv-initial">AM</span>
+              <span class="cv-area">Vendas</span>
+            </div>
+            <h3>Ana Maria</h3>
+            <p class="cv-role">Gerente Comercial</p>
+            <div class="cv-skills">
+              <span class="cv-skill">Vendas B2B</span>
+              <span class="cv-skill">Gestão de Equipe</span>
+              <span class="cv-skill">CRM</span>
+            </div>
+            <p class="cv-exp">8 anos de experiência em vendas B2B. Especializada em gestão de equipes de alta performance.</p>
+            <span class="cv-cta">Ver perfil<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></span>
+          </a>
+
+          <a href="perfis/joao-carlos.html" class="cv-card reveal reveal--up" data-delay="100">
+            <div class="cv-top">
+              <span class="cv-initial">JC</span>
+              <span class="cv-area">Operações</span>
+            </div>
+            <h3>João Carlos</h3>
+            <p class="cv-role">Coordenador de Ops</p>
+            <div class="cv-skills">
+              <span class="cv-skill">Operações</span>
+              <span class="cv-skill">Processos</span>
+              <span class="cv-skill">Lean</span>
+            </div>
+            <p class="cv-exp">6 anos em logística e operações. Vivência em melhoria de processos e redução de custos.</p>
+            <span class="cv-cta">Ver perfil<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></span>
+          </a>
+
+          <a href="perfis/paula-silva.html" class="cv-card reveal reveal--up" data-delay="200">
+            <div class="cv-top">
+              <span class="cv-initial">PS</span>
+              <span class="cv-area">Recursos Humanos</span>
+            </div>
+            <h3>Paula Silva</h3>
+            <p class="cv-role">Gestora de Pessoas</p>
+            <div class="cv-skills">
+              <span class="cv-skill">RH</span>
+              <span class="cv-skill">Recrutamento</span>
+              <span class="cv-skill">Clima</span>
+            </div>
+            <p class="cv-exp">9 anos em recursos humanos. Especialidade em recrutamento e desenvolvimento de lideranças.</p>
+            <span class="cv-cta">Ver perfil<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></span>
+          </a>
+        </div>
+
+        <div class="cv-footer-cta reveal reveal--up">
+          <a href="cadastro.html" class="btn btn--ghost">Preencher meu currículo<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA FINAL ============ -->
+    <section class="final-cta section-rule" id="contato">
+      <div class="final-watermark" aria-hidden="true">ELEVAR</div>
+      <div class="container">
+        <div class="cta-inner">
+          <p class="eyebrow eyebrow--center reveal reveal--up">Próximo Passo</p>
+          <h2 class="h-display reveal reveal--up">Vamos elevar o nível<br>do seu <em>negócio?</em></h2>
+          <p class="lead reveal reveal--up">Converse diretamente com Jefferson e descubra como transformamos lideranças e processos em vantagem competitiva real e mensurável.</p>
+
+          <div class="final-actions reveal reveal--up">
+            <a href="https://wa.me/5518996272190?text=Ol%C3%A1,%20gostaria%20de%20saber%20mais%20sobre%20os%20treinamentos%20da%20ELEVAR" class="btn btn--primary btn--magnetic" target="_blank" rel="noopener noreferrer" aria-label="Agendar reunião pelo WhatsApp">
+              Falar no WhatsApp<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg>
+            </a>
+            <a href="#servicos" class="btn btn--ghost">Explorar soluções</a>
+          </div>
+
+          <div class="cta-contact">
+            <div class="cta-contact-item">
+              <div class="lbl">Fundador</div>
+              <div class="val">Jefferson Malaguti</div>
+            </div>
+            <div class="cta-contact-item">
+              <div class="lbl">Empresa</div>
+              <div class="val">ELEVAR Business</div>
+            </div>
+            <div class="cta-contact-item">
+              <div class="lbl">Especialidade</div>
+              <div class="val">Gestão &amp; Performance</div>
             </div>
           </div>
         </div>
       </div>
-      <div class="reveal">
-        <div class="big-quote">
-          Não entregamos apenas treinamentos; entregamos a evolução da sua <em>cultura organizacional</em>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- SLIDE 7: DEPOIMENTOS -->
-  <section class="slide" id="slide-7" data-label="Depoimentos">
-    <div class="noise"></div>
-    <div class="corner-ornament tl"></div>
-    <div class="corner-ornament br"></div>
-    <div class="inner">
-      <p class="section-label reveal" style="text-align:center;">O que dizem nossos clientes</p>
-      <h2 class="section-title reveal" style="text-align:center;">Depoimentos</h2>
-      <div class="gold-line reveal"></div>
-      <p class="body-text reveal" style="text-align:center;max-width:600px;margin:0 auto 0;">A transformação real acontece quando os resultados falam por si. Estas são algumas histórias de sucesso das organizações que elevamos junto.</p>
-      <div class="testimonials-grid reveal">
-        <div class="testimonial-card">
-          <p class="testimonial-text">"Depois do treinamento de liderança, nossa equipe de gestores mudou completamente a forma de conduzir reuniões e dar feedbacks. O resultado? Crescimento de 47% em engajamento e redução de 60% turnover."</p>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">RS</div>
-            <div class="testimonial-info">
-              <div class="name">Roberto Santana</div>
-              <div class="role">Diretor Geral</div>
-              <div class="company">Grupo Vital</div>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card">
-          <p class="testimonial-text">"A consultoria transformou nossa operação. Mapeamos gargalos que nem sabíamos existir e reconstruímos processos que triplicaram nossa produtividade em 6 meses."</p>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">ML</div>
-            <div class="testimonial-info">
-              <div class="name">Mariana Lima</div>
-              <div class="role">CEO</div>
-              <div class="company">Innovare Tech</div>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card">
-          <p class="testimonial-text">"O coaching executivo foi divisor de águas na minha carreira. Em 3 meses, consegui estruturar minha liderança e bater metas que pareciam impossíveis. Investimento que se pagou várias vezes."</p>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">AP</div>
-            <div class="testimonial-info">
-              <div class="name">André Pereira</div>
-              <div class="role">Diretor Comercial</div>
-              <div class="company">Stark Industries</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  </main>
 
-  <!-- SLIDE 8: VENDAS & HABILIDADES -->
-  <section class="slide" id="slide-8" data-label="Vendas">
-    <div class="inner">
-      <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:24px;">
-        <div>
-          <p class="section-label reveal">Prospecção & Vendas</p>
-          <h2 class="section-title reveal">Vendas<br>& <em style="color:var(--gold-dark)">Habilidades</em></h2>
-          <div class="gold-line-left reveal" style="background:linear-gradient(90deg,var(--gold-dark),transparent);"></div>
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <span class="brand-name">ELEVAR</span>
+          <p>Gestão &amp; Performance Humana. Consultoria empresarial em liderança, desenvolvimento humano e otimização de processos gerenciais.</p>
         </div>
-        <p class="reveal" style="font-size:12px;color:#999;font-style:italic;max-width:280px;padding-bottom:8px;">* Valores para turmas de até 25 participantes. Projetos maiores sob consulta.</p>
-      </div>
-      <div class="sales-grid">
-        <div class="sales-card reveal">
-          <span class="badge">16 Horas</span>
-          <h3>Prospecção de Alta Performance</h3>
-          <div class="duration">2 Dias · Turma até 25 pessoas</div>
-          <p>Metodologia completa de prospecção ativa para transformar sua equipe comercial em uma máquina de gerar leads qualificados e converter oportunidades.</p>
-          <div class="module">Análise comportamental do comprador</div>
-          <div class="module">Técnicas de abordagem e qualificação BANT</div>
-          <div class="module">Prospecção multicanal (LinkedIn, e-mail, telefone)</div>
-          <div class="module">Construção de autoridade e rapport</div>
-          <div class="module">Fechamento consultivo</div>
-          <div class="price-display">
-            <span class="currency">R$</span>
-            <span class="amount">7.800</span>
-            <span class="per">/turma</span>
-          </div>
-          <p class="price-sub">R$ 487,00 / hora</p>
-        </div>
-        <div class="sales-card reveal">
-          <span class="badge">8 Horas</span>
-          <h3>Negociação Avançada</h3>
-          <div class="duration">1 Dia Completo · Turma até 25 pessoas</div>
-          <p>Técnicas de negociação para fechar deals de alto valor. Aprenda a ler sinais, estruturar propostas irrecusáveis e eliminar objeções.</p>
-          <div class="module">Psicologia da decisão de compra</div>
-          <div class="module">Técnicas de anchoring e escassez</div>
-          <div class="module">Gestão de objeções avançada</div>
-          <div class="module">Fechamento alternativo e gancho</div>
-          <div class="module">Negociação B2B de alto ticket</div>
-          <div class="price-display">
-            <span class="currency">R$</span>
-            <span class="amount">5.200</span>
-            <span class="per">/turma</span>
-          </div>
-          <p class="price-sub">R$ 650,00 / hora</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- SLIDE 9: DESENVOLVIMENTO INDIVIDUAL -->
-  <section class="slide" id="slide-9" data-label="Individual">
-    <div class="noise"></div>
-    <div class="corner-ornament tl"></div>
-    <div class="corner-ornament br"></div>
-    <div class="inner">
-      <p class="section-label reveal">Foco no Indivíduo</p>
-      <h2 class="section-title reveal">Desenvolvimento <em>Individual</em></h2>
-      <div class="gold-line-left reveal"></div>
-      <p class="body-text reveal" style="max-width:600px;margin-bottom:0;">Soluções personalizadas para executivos, gestores e colaboradores que buscam evolução acelerada com suporte especializado contínuo.</p>
-      <div class="dev-grid reveal">
-        <div class="dev-card">
-          <h3>Coaching Executivo</h3>
-          <div class="format">10 Sessões · Pacote</div>
-          <div class="dev-price">R$ 4.997</div>
-          <div class="dev-price-sub">pacote completo</div>
-          <p>Para Gestores: Foco em KPIs e metas estratégicas relacionais. Acompanhamento de alta intensidade para resultados rápidos.</p>
-        </div>
-        <div class="dev-card">
-          <h3>Processo Terapêutico</h3>
-          <div class="format">Sessão Avulsa</div>
-          <div class="dev-price">R$ 280</div>
-          <div class="dev-price-sub">por sessão</div>
-          <p>Para Colaboradores: Suporte individual para equipes. Saúde mental como vantagem competitiva organizacional.</p>
-        </div>
-        <div class="dev-card">
-          <h3>Plantão Elevar</h3>
-          <div class="format">4h/Semana · Mensal</div>
-          <div class="dev-price">R$ 4.500</div>
-          <div class="dev-price-sub">por mês</div>
-          <p>Suporte contínuo para gestão. Disponibilidade estratégica para resolver desafios em tempo real.</p>
-        </div>
-        <div class="dev-card">
-          <h3>Processo Gerencial</h3>
-          <div class="format">10 Sessões · Pacote</div>
-          <div class="dev-price">R$ 4.997</div>
-          <div class="dev-price-sub">pacote completo</div>
-          <p>Foco em desenvolvimento profissional com suporte técnico. Para líderes em transição ou expansão de responsabilidades.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+        <nav class="footer-col" aria-label="Navegação do rodapé">
+          <h4>Navegar</h4>
+          <a href="#proposito">Propósito</a>
+          <a href="#fundador">Jefferson</a>
+          <a href="#metodologia">Metodologia</a>
+          <a href="#servicos">Serviços</a>
+          <a href="#curriculos">Talentos</a>
+        </nav>
 
-  <!-- SLIDE 10: CURRÍCULOS -->
-  <section class="slide" id="slide-10" data-label="Currículos">
-    <div class="noise"></div>
-    <div class="corner-ornament tl"></div>
-    <div class="corner-ornament br"></div>
-    <div class="inner">
-      <p class="section-label reveal" style="text-align:center;">Banco de Talentos</p>
-      <h2 class="section-title reveal" style="text-align:center;">Currículos <em>Disponíveis</em></h2>
-      <div class="gold-line reveal"></div>
-      <p class="body-text reveal" style="text-align:center;max-width:600px;margin:0 auto 0;">Profissionais selecionados e preparados para alta performance. Candidate-se ou contrate talent.</p>
-      <div class="cv-grid reveal">
-        <a href="perfis/ana-maria.html" class="cv-card">
-          <div class="cv-avatar">AM</div>
-          <h3 class="cv-name">Ana Maria</h3>
-          <p class="cv-role">Gerente Comercial</p>
-          <div class="cv-skills">
-            <span class="cv-skill">Vendas</span>
-            <span class="cv-skill">Gestão de Equipe</span>
-            <span class="cv-skill">CRM</span>
-          </div>
-          <p class="cv-exp">8 anos de experiência em vendas B2B. Especializada em gestão de equipes de alta performance.</p>
-          <span class="cv-cta">Ver perfil →</span>
-        </a>
-        <a href="perfis/joao-carlos.html" class="cv-card">
-          <div class="cv-avatar">JC</div>
-          <h3 class="cv-name">João Carlos</h3>
-          <p class="cv-role">Coordenador de Ops</p>
-          <div class="cv-skills">
-            <span class="cv-skill">Operações</span>
-            <span class="cv-skill">Processos</span>
-            <span class="cv-skill">Lean</span>
-          </div>
-          <p class="cv-exp">6 anos em logística e operações. Vivência em melhoria de processos e redução de custos.</p>
-          <span class="cv-cta">Ver perfil →</span>
-        </a>
-        <a href="perfis/paula-silva.html" class="cv-card">
-          <div class="cv-avatar">PS</div>
-          <h3 class="cv-name">Paula Silva</h3>
-          <p class="cv-role">Gestora de Pessoas</p>
-          <div class="cv-skills">
-            <span class="cv-skill">RH</span>
-            <span class="cv-skill">Recrutamento</span>
-            <span class="cv-skill">Clima</span>
-          </div>
-          <p class="cv-exp">9 anos em recursos humanos. Especialidade em recrutamento e desenvolvimento de lideranças.</p>
-          <span class="cv-cta">Ver perfil →</span>
-        </a>
-      </div>
-      <div class="reveal" style="text-align:center;margin-top:48px;">
-        <a href="cadastro.html" class="cta-button" style="background:transparent;border:1px solid var(--gold);color:var(--gold);">Preencher meu Currículo</a>
-      </div>
-    </div>
-  </section>
+        <nav class="footer-col" aria-label="Soluções">
+          <h4>Soluções</h4>
+          <a href="#solucoes">Keynote Speaking</a>
+          <a href="#solucoes">High Performance Training</a>
+          <a href="#solucoes">Consultoria Gerencial</a>
+          <a href="#solucoes">Executive Mentoring</a>
+        </nav>
 
-  <!-- SLIDE 11: TREINAMENTOS CORPORATIVOS -->
-  <section class="slide" id="slide-11" data-label="Corporativo">
-    <div class="inner">
-      <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:24px;">
-        <div>
-          <p class="section-label reveal">Corporativo</p>
-          <h2 class="section-title reveal">Treinamentos<br>& <em style="color:var(--gold-dark)">Workshops</em></h2>
-          <div class="gold-line-left reveal" style="background:linear-gradient(90deg,var(--gold-dark),transparent);"></div>
-        </div>
-        <p class="reveal" style="font-size:12px;color:#999;font-style:italic;max-width:280px;padding-bottom:8px;">* Valores para turmas de até 25 participantes.</p>
-      </div>
-      <div class="training-grid">
-        <div class="training-card reveal">
-          <span class="badge">8 Horas</span>
-          <h3>Liderança em Alta Performance</h3>
-          <div class="duration">1 Dia Completo · Turma até 25 pessoas</div>
-          <p style="font-size:13px;color:#888;line-height:1.7;">Desenvolvimento acelerado de competências de liderança para gestores que precisam engajar equipes e alcançar resultados com consistência.</p>
-          <div class="price-display">
-            <span class="currency">R$</span>
-            <span class="amount">5.200</span>
-            <span class="per">/turma</span>
-          </div>
-        </div>
-        <div class="training-card reveal">
-          <span class="badge">8 Horas</span>
-          <h3>Vendedor Campeão</h3>
-          <div class="duration">1 Dia Completo · Turma até 25 pessoas</div>
-          <p style="font-size:13px;color:#888;line-height:1.7;">Metodologia intensiva para transformar equipes comerciais em máquinas de vendas através de técnicas comportamentais e de persuasão ética.</p>
-          <div class="price-display">
-            <span class="currency">R$</span>
-            <span class="amount">4.400</span>
-            <span class="per">/turma</span>
-          </div>
-        </div>
-        <div class="training-card reveal">
-          <span class="badge">4 Horas</span>
-          <h3>Gestão Emocional Aplicada</h3>
-          <div class="duration">Meio Período · Turma até 25 pessoas</div>
-          <p style="font-size:13px;color:#888;line-height:1.7;">Ferramentas práticas de regulação emocional para líderes e colaboradores manterem alta performance em ambientes de pressão.</p>
-          <div class="price-display">
-            <span class="currency">R$</span>
-            <span class="amount">3.400</span>
-            <span class="per">/turma</span>
-          </div>
-        </div>
-        <div class="training-card reveal">
-          <span class="badge">4 Horas</span>
-          <h3>Atendimento Humanizado</h3>
-          <div class="duration">Meio Período · Turma até 25 pessoas</div>
-          <p style="font-size:13px;color:#888;line-height:1.7;">Capacitação para equipes de front-end criarem experiências memoráveis ao cliente, elevando NPS e fidelização.</p>
-          <div class="price-display">
-            <span class="currency">R$</span>
-            <span class="amount">3.400</span>
-            <span class="per">/turma</span>
-          </div>
+        <div class="footer-col footer-contact">
+          <h4>Contato</h4>
+          <a href="https://wa.me/5518996272190" target="_blank" rel="noopener noreferrer">WhatsApp · +55 (18) 99627-2190</a>
+          <a href="#contato">Falar com Jefferson</a>
+          <a href="cadastro.html">Cadastrar currículo</a>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- SLIDE 12: CONSULTORIA -->
-  <section class="slide" id="slide-12" data-label="Consultoria">
-    <div class="noise"></div>
-    <div class="inner">
-      <p class="section-label reveal" style="text-align:center;">Projetos Estratégicos</p>
-      <h2 class="section-title reveal" style="text-align:center;font-size:52px;">Consultoria<br>& <em>Processos</em></h2>
-      <div class="gold-line reveal"></div>
-      <p class="body-text reveal" style="text-align:center;max-width:600px;margin:0 auto 0;">Projetos focados na estrutura e eficiência operacional da sua organização. Metodologia em três etapas para garantir resultados sustentáveis.</p>
-      <div class="process-steps">
-        <div class="process-step reveal">
-          <div class="step-circle"><span>01</span></div>
-          <h4>Diagnóstico Inicial</h4>
-          <p>Análise profunda dos processos atuais, mapeamento de gargalos e identificação de oportunidades de crescimento.</p>
-        </div>
-        <div class="process-step reveal">
-          <div class="step-circle"><span>02</span></div>
-          <h4>Reestruturação</h4>
-          <p>Desenho de novos fluxos operacionais, implantação de indicadores estratégicos (KPIs) e alinhamento das equipes.</p>
-        </div>
-        <div class="process-step reveal">
-          <div class="step-circle"><span>03</span></div>
-          <h4>Acompanhamento</h4>
-          <p>Suporte consultivo durante a fase de execução para garantir a sustentabilidade dos resultados.</p>
-        </div>
+      <div class="footer-bottom">
+        <p>© <span id="anoAtual">2026</span> ELEVAR — Gestão &amp; Performance Humana. Jefferson Malaguti.</p>
+        <p>Consultoria empresarial · Treinamento corporativo · Desenvolvimento executivo</p>
       </div>
     </div>
-  </section>
+    <div class="footer-ww" aria-hidden="true">ELEVAR</div>
+  </footer>
 
-  <!-- SLIDE 13: CTA FINAL -->
-  <section class="slide" id="slide-13" data-label="Contato">
-    <div class="noise"></div>
-    <div class="corner-ornament tl"></div>
-    <div class="corner-ornament tr"></div>
-    <div class="corner-ornament bl"></div>
-    <div class="corner-ornament br"></div>
-    <div class="inner">
-      <p class="section-label reveal" style="text-align:center;font-size:11px;letter-spacing:0.6em;">Próximo Passo</p>
-      <h2 class="section-title reveal" style="font-size:60px;text-align:center;color:var(--offwhite);">Vamos elevar o nível<br>do seu <em>negócio?</em></h2>
-      <div class="gold-line reveal"></div>
-      <p class="cta-sub reveal">Converse diretamente com Jefferson e descubra como transformamos lideranças e processos em vantagem competitiva real e mensurável.</p>
-      <div class="reveal">
-        <a href="https://wa.me/5518996272190?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20os%20treinamentos%20da%20ELEVAR" target="_blank" rel="noopener noreferrer" class="cta-button" aria-label="Agendar reunião pelo WhatsApp">
-          Falar no WhatsApp
-        </a>
-      </div>
-      <div class="contact-info reveal">
-        <div class="contact-item">
-          <div class="label">Fundador</div>
-          <div class="value">Jefferson Malaguti</div>
-        </div>
-        <div class="contact-item">
-          <div class="label">Empresa</div>
-          <div class="value">ELEVAR Business</div>
-        </div>
-        <div class="contact-item">
-          <div class="label">Especialidade</div>
-          <div class="value">Gestão & Performance</div>
-        </div>
-      </div>
-      <div class="footer-logo">ELEVAR</div>
-    </div>
-  </section>
+  <!-- ============ NAV DOTS ============ -->
+  <nav class="nav-dots" id="navDots" aria-label="Navegação por seções"></nav>
 
   <script>
-    // Build nav dots
-    const slides = document.querySelectorAll('.slide');
-    const navDots = document.getElementById('navDots');
-    slides.forEach((slide, i) => {
-      const dot = document.createElement('div');
-      dot.className = 'nav-dot' + (i === 0 ? ' active' : '');
-      dot.title = slide.dataset.label || '';
-      dot.addEventListener('click', () => {
-        slide.scrollIntoView({ behavior: 'smooth' });
-      });
-      navDots.appendChild(dot);
-    });
+    (function () {
+      'use strict';
 
-    // Update active dot on scroll
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const idx = Array.from(slides).indexOf(entry.target);
-          document.querySelectorAll('.nav-dot').forEach((d, i) => {
-            d.classList.toggle('active', i === idx);
+      var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var finePointer = window.matchMedia('(pointer: fine)').matches;
+
+      /* ---------- 1. HEADER SCROLL ---------- */
+      var header = document.getElementById('siteHeader');
+      function onScrollHeader() {
+        header.classList.toggle('is-scrolled', window.scrollY > 24);
+      }
+      onScrollHeader();
+      window.addEventListener('scroll', onScrollHeader, { passive: true });
+
+      /* ---------- 2. MENU MOBILE ---------- */
+      var burger = document.getElementById('burger');
+      var mobileMenu = document.getElementById('mobileMenu');
+      function closeMenu() {
+        mobileMenu.classList.remove('is-open');
+        burger.classList.remove('is-open');
+        burger.setAttribute('aria-expanded', 'false');
+        document.body.classList.remove('lock-scroll');
+      }
+      function toggleMenu() {
+        var open = mobileMenu.classList.toggle('is-open');
+        burger.classList.toggle('is-open', open);
+        burger.setAttribute('aria-expanded', String(open));
+        document.body.classList.toggle('lock-scroll', open);
+      }
+      burger.addEventListener('click', toggleMenu);
+      mobileMenu.querySelectorAll('a').forEach(function (a) {
+        a.addEventListener('click', closeMenu);
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeMenu();
+      });
+
+      /* ---------- 3. REVEAL SYSTEM ---------- */
+      var revealEls = document.querySelectorAll('.reveal, .reveal--up, .reveal--fade, .stagger');
+      if ('IntersectionObserver' in window && !prefersReduced) {
+        var revealObserver = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              var delay = parseInt(entry.target.dataset.delay || 0, 10);
+              entry.target.style.transitionDelay = delay + 'ms';
+              entry.target.classList.add('is-in');
+              revealObserver.unobserve(entry.target);
+            }
           });
-        }
-      });
-    }, { threshold: 0.5 });
-    slides.forEach(s => observer.observe(s));
+        }, { threshold: 0.14, rootMargin: '0px 0px -8% 0px' });
+        revealEls.forEach(function (el) { revealObserver.observe(el); });
 
-    // Atalho menu - mostra quando scroll passa do primeiro slide
-    const atalhosMenu = document.getElementById('atalhosMenu');
-    const atalhosObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        atalhosMenu.classList.toggle('visible', !entry.isIntersecting);
-      });
-    }, { threshold: 0 });
-    atalhosObserver.observe(document.getElementById('slide-1'));
+        var maskEls = document.querySelectorAll('.reveal-mask');
+        var maskObserver = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-in');
+              maskObserver.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.4 });
+        maskEls.forEach(function (el) { maskObserver.observe(el); });
 
-    // Reveal on scroll
-    const reveals = document.querySelectorAll('.reveal');
-    const revealObs = new IntersectionObserver((entries) => {
-      entries.forEach((entry, i) => {
-        if (entry.isIntersecting) {
-          setTimeout(() => {
-            entry.target.classList.add('visible');
-          }, 100);
+        var imgEls = document.querySelectorAll('.img-reveal');
+        var imgObserver = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-in');
+              imgObserver.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.2 });
+        imgEls.forEach(function (el) { imgObserver.observe(el); });
+      } else {
+        revealEls.forEach(function (el) { el.classList.add('is-in'); });
+        document.querySelectorAll('.reveal-mask, .img-reveal').forEach(function (el) { el.classList.add('is-in'); });
+      }
+
+      /* ---------- 4. COUNTERS ---------- */
+      var counters = document.querySelectorAll('[data-count]');
+      function animateCount(el, target, duration) {
+        var start = null;
+        function step(ts) {
+          if (!start) start = ts;
+          var p = Math.min((ts - start) / duration, 1);
+          var eased = 1 - Math.pow(1 - p, 3);
+          el.textContent = Math.round(target * eased);
+          if (p < 1) requestAnimationFrame(step);
+          else el.textContent = target;
         }
+        requestAnimationFrame(step);
+      }
+      if ('IntersectionObserver' in window) {
+        var countObserver = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              var target = parseInt(entry.target.dataset.count, 10);
+              if (prefersReduced) { entry.target.textContent = target; }
+              else animateCount(entry.target, target, 1500);
+              countObserver.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.5 });
+        counters.forEach(function (c) { countObserver.observe(c); });
+      } else {
+        counters.forEach(function (c) { c.textContent = c.dataset.count; });
+      }
+
+      /* ---------- 5. PARALLAX SUTIL ---------- */
+      if (!prefersReduced) {
+        var parallaxEls = [].slice.call(document.querySelectorAll('[data-parallax]'));
+        if (finePointer && 'requestAnimationFrame' in window) {
+          var ticking = false;
+          function updateParallax() {
+            var vh = window.innerHeight;
+            parallaxEls.forEach(function (el) {
+              var rect = el.parentElement.getBoundingClientRect();
+              if (rect.bottom < 0 || rect.top > vh) return;
+              var progress = (rect.top + rect.height / 2 - vh / 2) / vh;
+              var amount = -1.0;
+              el.style.transform = 'translate3d(0, ' + (progress * amount * 26) + 'px, 0) scale(1.02)';
+            });
+            ticking = false;
+          }
+          function rafParallax() {
+            if (!ticking) { ticking = true; requestAnimationFrame(updateParallax); }
+          }
+          window.addEventListener('scroll', rafParallax, { passive: true });
+          window.addEventListener('resize', rafParallax, { passive: true });
+          updateParallax();
+        }
+      }
+
+      /* ---------- 6. MAGNETIC BUTTONS ---------- */
+      if (finePointer && !prefersReduced) {
+        document.querySelectorAll('.btn--magnetic').forEach(function (btn) {
+          btn.addEventListener('mousemove', function (e) {
+            var r = btn.getBoundingClientRect();
+            var x = (e.clientX - r.left - r.width / 2) * 0.14;
+            var y = (e.clientY - r.top - r.height / 2) * 0.14;
+            btn.style.transform = 'translate(' + Math.round(x * 100) / 100 + 'px,' + Math.round(y * 100) / 100 + 'px)';
+          });
+          btn.addEventListener('mouseleave', function () {
+            btn.style.transform = '';
+          });
+        });
+      }
+
+      /* ---------- 7. TABS SERVIÇOS ---------- */
+      var tabs = [].slice.call(document.querySelectorAll('[data-tab]'));
+      var tabPanels = [].slice.call(document.querySelectorAll('.tab-panel'));
+      function selectTab(id) {
+        tabs.forEach(function (t) {
+          var active = t.dataset.tab === id;
+          t.classList.toggle('is-active', active);
+          t.setAttribute('aria-selected', String(active));
+          t.setAttribute('tabindex', active ? '0' : '-1');
+        });
+        tabPanels.forEach(function (p) {
+          p.classList.toggle('is-active', p.id === 'panel-' + id);
+        });
+      }
+      tabs.forEach(function (tab) {
+        tab.addEventListener('click', function () {
+          selectTab(tab.dataset.tab);
+          tab.focus();
+        });
+        tab.addEventListener('keydown', function (e) {
+          var idx = tabs.indexOf(tab);
+          if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+            e.preventDefault();
+            var nextT = tabs[(idx + 1) % tabs.length];
+            selectTab(nextT.dataset.tab); nextT.focus();
+          } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+            e.preventDefault();
+            var prevT = tabs[(idx - 1 + tabs.length) % tabs.length];
+            selectTab(prevT.dataset.tab); prevT.focus();
+          } else if (e.key === 'Home') {
+            e.preventDefault(); selectTab(tabs[0].dataset.tab); tabs[0].focus();
+          } else if (e.key === 'End') {
+            e.preventDefault(); selectTab(tabs[tabs.length - 1].dataset.tab); tabs[tabs.length - 1].focus();
+          }
+        });
       });
-    }, { threshold: 0.1 });
-    reveals.forEach(r => revealObs.observe(r));
+
+      /* ---------- 8. DEPOIMENTOS ---------- */
+      var slides = [].slice.call(document.querySelectorAll('[data-slide]'));
+      var dotsWrap = document.getElementById('testimonialDots');
+      var curLabel = document.getElementById('testimonialCurrent');
+      var totalLabel = document.getElementById('testimonialTotal');
+      var idx = 0;
+      var timer = null;
+
+      if (totalLabel) totalLabel.textContent = String(slides.length).padStart(2, '0');
+
+      slides.forEach(function (_, i) {
+        var dot = document.createElement('button');
+        dot.className = 't-dot' + (i === 0 ? ' is-active' : '');
+        dot.setAttribute('aria-label', 'Ir para depoimento ' + (i + 1));
+        dot.addEventListener('click', function () { goTo(i); resetTimer(); });
+        dotsWrap.appendChild(dot);
+      });
+      var dots = [].slice.call(dotsWrap.children);
+
+      function goTo(n) {
+        idx = (n + slides.length) % slides.length;
+        slides.forEach(function (s, i) { s.classList.toggle('is-active', i === idx); });
+        dots.forEach(function (d, i) { d.classList.toggle('is-active', i === idx); });
+        if (curLabel) curLabel.textContent = String(idx + 1).padStart(2, '0');
+      }
+      function next() { goTo(idx + 1); }
+      function prev() { goTo(idx - 1); }
+      function resetTimer() {
+        if (timer) clearInterval(timer);
+        if (!prefersReduced) timer = setInterval(next, 8000);
+      }
+      document.getElementById('testimonialNext').addEventListener('click', function () { next(); resetTimer(); });
+      document.getElementById('testimonialPrev').addEventListener('click', function () { prev(); resetTimer(); });
+      var stage = document.getElementById('testimonialStage');
+      stage.addEventListener('mouseenter', function () { if (timer) clearInterval(timer); });
+      stage.addEventListener('mouseleave', resetTimer);
+
+      var touchX = null;
+      stage.addEventListener('touchstart', function (e) { touchX = e.touches[0].clientX; }, { passive: true });
+      stage.addEventListener('touchend', function (e) {
+        if (touchX === null) return;
+        var dx = e.changedTouches[0].clientX - touchX;
+        if (Math.abs(dx) > 40) { dx < 0 ? next() : prev(); resetTimer(); }
+        touchX = null;
+      }, { passive: true });
+
+      resetTimer();
+
+      /* ---------- 9. NAV DOTS ---------- */
+      var targets = ['inicio', 'proposito', 'fundador', 'pilares', 'metodologia', 'solucoes', 'diferenciais', 'depoimentos', 'servicos', 'curriculos'];
+      var dotsNav = document.getElementById('navDots');
+      var targetEls = targets.map(function (id) { return document.getElementById(id); }).filter(Boolean);
+
+      if (targetEls.length) {
+        var dotsBuilt = [];
+        targetEls.forEach(function (el, i) {
+          var d = document.createElement('button');
+          d.className = 'nav-dot' + (i === 0 ? ' is-active' : '');
+          d.setAttribute('aria-label', 'Ir para ' + (el.getAttribute('aria-label') || el.id));
+          d.addEventListener('click', function () {
+            el.scrollIntoView({ behavior: prefersReduced ? 'auto' : 'smooth', block: 'start' });
+          });
+          dotsNav.appendChild(d);
+          dotsBuilt.push(d);
+        });
+        var dotObserver = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              var i = targetEls.indexOf(entry.target);
+              dotsBuilt.forEach(function (d, di) { d.classList.toggle('is-active', di === i); });
+            }
+          });
+        }, { threshold: 0.45 });
+        targetEls.forEach(function (el) { dotObserver.observe(el); });
+      } else {
+        dotsNav.style.display = 'none';
+      }
+
+      /* ---------- 10. ANO ---------- */
+      var ano = document.getElementById('anoAtual');
+      if (ano) ano.textContent = new Date().getFullYear();
+    })();
   </script>
 </body>
 </html>
